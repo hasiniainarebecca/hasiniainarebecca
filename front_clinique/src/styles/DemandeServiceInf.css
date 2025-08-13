@@ -1,0 +1,503 @@
+/* Variables couleurs spécifiques pour DemandeServiceInf */
+:root {
+  --demande-service-primary: #3b82f6;
+  --demande-service-primary-light: #dbeafe;
+  --demande-service-primary-dark: #1e40af;
+  --demande-service-success: #10b981;
+  --demande-service-success-light: #d1fae5;
+  --demande-service-warning: #f59e0b;
+  --demande-service-warning-light: #fef3c7;
+  --demande-service-error: #ef4444;
+  --demande-service-error-light: #fee2e2;
+  --demande-service-gray-50: #f9fafb;
+  --demande-service-gray-100: #f3f4f6;
+  --demande-service-gray-200: #e5e7eb;
+  --demande-service-gray-300: #d1d5db;
+  --demande-service-gray-400: #9ca3af;
+  --demande-service-gray-500: #6b7280;
+  --demande-service-gray-600: #4b5563;
+  --demande-service-gray-700: #374151;
+  --demande-service-gray-800: #1f2937;
+  --demande-service-gray-900: #111827;
+  --demande-service-white: #ffffff;
+  --demande-service-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
+  --demande-service-shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+  --demande-service-shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+}
+
+/* Container principal */
+.demande-service-modern-container {
+  background-color: var(--demande-service-gray-50);
+  min-height: 100vh;
+  padding: 24px;
+}
+
+/* Header */
+.demande-service-modern-header {
+  margin-bottom: 32px;
+}
+
+.demande-service-modern-title {
+  font-size: 32px;
+  font-weight: 700;
+  color: var(--demande-service-gray-900);
+  margin: 0 0 8px 0;
+  line-height: 1.2;
+}
+
+.demande-service-modern-subtitle {
+  font-size: 16px;
+  color: var(--demande-service-gray-600);
+  margin: 0;
+  line-height: 1.5;
+}
+
+/* Tabs Navigation */
+.demande-service-modern-tabs {
+  display: flex;
+  gap: 4px;
+  margin-bottom: 32px;
+  background-color: var(--demande-service-gray-100);
+  padding: 4px;
+  border-radius: 12px;
+  width: fit-content;
+}
+
+.demande-service-modern-tab {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 20px;
+  border: none;
+  background-color: transparent;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--demande-service-gray-600);
+  cursor: pointer;
+  transition: all 0.2s ease;
+  position: relative;
+}
+
+.demande-service-modern-tab:hover {
+  background-color: var(--demande-service-white);
+  color: var(--demande-service-gray-800);
+}
+
+.demande-service-modern-tab-active {
+  background-color: var(--demande-service-white);
+  color: var(--demande-service-primary);
+  box-shadow: var(--demande-service-shadow);
+}
+
+.demande-service-modern-tab-count {
+  background-color: var(--demande-service-primary-light);
+  color: var(--demande-service-primary);
+  font-size: 11px;
+  font-weight: 600;
+  padding: 2px 6px;
+  border-radius: 10px;
+  min-width: 18px;
+  text-align: center;
+}
+
+.demande-service-modern-tab-active .demande-service-modern-tab-count {
+  background-color: var(--demande-service-primary);
+  color: var(--demande-service-white);
+}
+
+/* Content Section */
+.demande-service-modern-content {
+  background-color: var(--demande-service-white);
+  border-radius: 16px;
+  box-shadow: var(--demande-service-shadow);
+  overflow: hidden;
+}
+
+.demande-service-modern-section-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 24px 24px 16px 24px;
+  border-bottom: 1px solid var(--demande-service-gray-200);
+}
+
+.demande-service-modern-section-title {
+  font-size: 20px;
+  font-weight: 600;
+  color: var(--demande-service-gray-900);
+  margin: 0;
+}
+
+.demande-service-modern-stats {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.demande-service-modern-stats-text {
+  font-size: 14px;
+  color: var(--demande-service-gray-500);
+}
+
+/* Demands List */
+.demande-service-modern-list {
+  height: 400px;
+  max-height: 400px;
+  overflow-y: auto;
+  padding: 0;
+}
+
+.demande-service-modern-card {
+  display: flex;
+  align-items: flex-start;
+  gap: 20px;
+  padding: 24px;
+  border-bottom: 1px solid var(--demande-service-gray-100);
+  transition: background-color 0.2s ease;
+}
+
+.demande-service-modern-card:hover {
+  background-color: var(--demande-service-gray-50);
+}
+
+.demande-service-modern-card:last-child {
+  border-bottom: none;
+}
+
+/* Patient Info */
+.demande-service-modern-patient {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  min-width: 220px;
+  flex-shrink: 0;
+}
+
+.demande-service-modern-avatar {
+  width: 48px;
+  height: 48px;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--demande-service-white);
+  font-size: 18px;
+  font-weight: 600;
+  flex-shrink: 0;
+}
+
+.demande-service-modern-patient-info {
+  min-width: 0;
+  flex: 1;
+}
+
+.demande-service-modern-patient-name {
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--demande-service-gray-900);
+  margin: 0 0 4px 0;
+  line-height: 1.3;
+}
+
+.demande-service-modern-patient-email {
+  font-size: 13px;
+  color: var(--demande-service-gray-500);
+  margin: 0;
+  line-height: 1.3;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+/* Service Details */
+.demande-service-modern-details {
+  flex: 1;
+  min-width: 0;
+}
+
+.demande-service-modern-service-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 8px;
+}
+
+.demande-service-modern-service-name {
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--demande-service-gray-900);
+  margin: 0;
+  line-height: 1.3;
+  flex: 1;
+}
+
+.demande-service-modern-professional {
+  font-size: 14px;
+  color: var(--demande-service-gray-600);
+  margin: 0 0 12px 0;
+  line-height: 1.4;
+}
+
+.demande-service-modern-date-time {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 14px;
+  color: var(--demande-service-gray-600);
+  margin-bottom: 12px;
+}
+
+.demande-service-modern-date-time svg {
+  color: var(--demande-service-gray-400);
+  flex-shrink: 0;
+}
+
+.demande-service-modern-reason {
+  background-color: var(--demande-service-gray-50);
+  border-left: 3px solid var(--demande-service-primary);
+  padding: 12px;
+  border-radius: 0 8px 8px 0;
+  margin-top: 12px;
+}
+
+.demande-service-modern-reason-text {
+  font-size: 14px;
+  color: var(--demande-service-gray-700);
+  margin: 0;
+  line-height: 1.5;
+}
+
+/* Status */
+.demande-service-modern-status {
+  font-size: 12px;
+  font-weight: 600;
+  padding: 6px 12px;
+  border-radius: 20px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+.demande-service-modern-status-en-attente {
+  background-color: var(--demande-service-warning-light);
+  color: #b45309;
+}
+
+.demande-service-modern-status-confirme {
+  background-color: var(--demande-service-primary-light);
+  color: var(--demande-service-primary-dark);
+}
+
+.demande-service-modern-status-termine {
+  background-color: var(--demande-service-success-light);
+  color: #047857;
+}
+
+.demande-service-modern-status-annule,
+.demande-service-modern-status-rejetee {
+  background-color: var(--demande-service-error-light);
+  color: #b91c1c;
+}
+
+/* Actions */
+.demande-service-modern-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  min-width: 140px;
+  flex-shrink: 0;
+}
+
+.demande-service-modern-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 10px 16px;
+  border: none;
+  border-radius: 8px;
+  font-size: 13px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.demande-service-modern-btn svg {
+  flex-shrink: 0;
+}
+
+.demande-service-modern-btn-confirm {
+  background-color: var(--demande-service-success);
+  color: var(--demande-service-white);
+}
+
+.demande-service-modern-btn-confirm:hover {
+  background-color: #059669;
+  transform: translateY(-1px);
+  box-shadow: var(--demande-service-shadow-md);
+}
+
+.demande-service-modern-btn-reject {
+  background-color: var(--demande-service-error);
+  color: var(--demande-service-white);
+}
+
+.demande-service-modern-btn-reject:hover {
+  background-color: #dc2626;
+  transform: translateY(-1px);
+  box-shadow: var(--demande-service-shadow-md);
+}
+
+.demande-service-modern-btn-contact {
+  background-color: var(--demande-service-primary);
+  color: var(--demande-service-white);
+}
+
+.demande-service-modern-btn-contact:hover {
+  background-color: var(--demande-service-primary-dark);
+  transform: translateY(-1px);
+  box-shadow: var(--demande-service-shadow-md);
+}
+
+.demande-service-modern-btn-complete {
+  background-color: var(--demande-service-warning);
+  color: var(--demande-service-white);
+}
+
+.demande-service-modern-btn-complete:hover {
+  background-color: #d97706;
+  transform: translateY(-1px);
+  box-shadow: var(--demande-service-shadow-md);
+}
+
+.demande-service-modern-btn-completed {
+  background-color: var(--demande-service-success-light);
+  color: #047857;
+  cursor: default;
+}
+
+.demande-service-modern-btn-cancelled {
+  background-color: var(--demande-service-error-light);
+  color: #b91c1c;
+  cursor: default;
+}
+
+/* Empty State */
+.demande-service-modern-empty {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 80px 24px;
+  text-align: center;
+}
+
+.demande-service-modern-empty-icon {
+  width: 80px;
+  height: 80px;
+  background-color: var(--demande-service-gray-100);
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 24px;
+}
+
+.demande-service-modern-empty-icon svg {
+  color: var(--demande-service-gray-400);
+}
+
+.demande-service-modern-empty-title {
+  font-size: 20px;
+  font-weight: 600;
+  color: var(--demande-service-gray-900);
+  margin: 0 0 8px 0;
+}
+
+.demande-service-modern-empty-text {
+  font-size: 16px;
+  color: var(--demande-service-gray-600);
+  margin: 0;
+  line-height: 1.5;
+  max-width: 400px;
+}
+
+/* Loading & Error States */
+.demande-service-loading,
+.demande-service-error {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 400px;
+  font-size: 16px;
+  color: var(--demande-service-gray-600);
+}
+
+.demande-service-error {
+  color: var(--demande-service-error);
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .demande-service-modern-card {
+    flex-direction: column;
+    gap: 16px;
+  }
+  
+  .demande-service-modern-patient {
+    min-width: auto;
+  }
+  
+  .demande-service-modern-actions {
+    flex-direction: row;
+    flex-wrap: wrap;
+    min-width: auto;
+  }
+  
+  .demande-service-modern-service-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+  }
+}
+
+@media (max-width: 768px) {
+  .demande-service-modern-container {
+    padding: 16px;
+  }
+  
+  .demande-service-modern-title {
+    font-size: 24px;
+  }
+  
+  .demande-service-modern-tabs {
+    flex-direction: column;
+    width: 100%;
+  }
+  
+  .demande-service-modern-tab {
+    justify-content: center;
+  }
+  
+  .demande-service-modern-section-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+    padding: 16px;
+  }
+  
+  .demande-service-modern-card {
+    padding: 16px;
+  }
+  
+  .demande-service-modern-patient {
+    flex-direction: column;
+    text-align: center;
+  }
+}

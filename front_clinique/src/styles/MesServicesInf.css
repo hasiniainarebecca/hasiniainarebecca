@@ -1,0 +1,411 @@
+/* Variables de couleurs spécifiques pour MesServicesInf */
+:root {
+  --mes-services-primary: #007bff;
+  --mes-services-primary-light: #4fc3f7;
+  --mes-services-primary-dark: #0056b3;
+  --mes-services-success: #28a745;
+  --mes-services-danger: #dc3545;
+  --mes-services-warning: #ffc107;
+  --mes-services-info: #17a2b8;
+  --mes-services-light: #f8f9fa;
+  --mes-services-dark: #343a40;
+  --mes-services-white: #ffffff;
+  --mes-services-gray-100: #f8f9fa;
+  --mes-services-gray-200: #e9ecef;
+  --mes-services-gray-300: #dee2e6;
+  --mes-services-gray-400: #ced4da;
+  --mes-services-gray-500: #adb5bd;
+  --mes-services-gray-600: #6c757d;
+  --mes-services-gray-700: #495057;
+  --mes-services-gray-800: #343a40;
+  --mes-services-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  --mes-services-shadow-hover: 0 4px 20px rgba(0, 0, 0, 0.15);
+  --mes-services-border-radius: 12px;
+  --mes-services-transition: all 0.3s ease;
+}
+
+/* Container principal */
+.mes-services-container {
+  padding: 32px;
+  background-color: var(--mes-services-gray-100);
+  height: 739px;
+  overflow-y: auto;
+}
+
+/* Header avec statistiques */
+.mes-services-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 40px;
+  flex-wrap: wrap;
+  gap: 24px;
+}
+
+.mes-services-title {
+  font-size: 32px;
+  font-weight: 700;
+  color: var(--mes-services-gray-800);
+  margin: 0;
+  line-height: 1.2;
+}
+
+.mes-services-stats {
+  display: flex;
+  gap: 20px;
+}
+
+.mes-services-stat-card {
+  background: var(--mes-services-white);
+  border-radius: var(--mes-services-border-radius);
+  padding: 24px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  box-shadow: var(--mes-services-shadow);
+  transition: var(--mes-services-transition);
+  border: 1px solid var(--mes-services-gray-200);
+}
+
+.mes-services-stat-card:hover {
+  box-shadow: var(--mes-services-shadow-hover);
+  transform: translateY(-2px);
+}
+
+.mes-services-stat-icon {
+  background: linear-gradient(135deg, var(--mes-services-primary), var(--mes-services-primary-light));
+  border-radius: 12px;
+  padding: 12px;
+  color: var(--mes-services-white);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.mes-services-stat-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.mes-services-stat-number {
+  font-size: 28px;
+  font-weight: 700;
+  color: var(--mes-services-gray-800);
+  line-height: 1;
+}
+
+.mes-services-stat-label {
+  font-size: 14px;
+  color: var(--mes-services-gray-600);
+  margin-top: 4px;
+}
+
+/* Section principale */
+.mes-services-main-section {
+  background: var(--mes-services-white);
+  border-radius: var(--mes-services-border-radius);
+  box-shadow: var(--mes-services-shadow);
+  padding: 32px;
+  border: 1px solid var(--mes-services-gray-200);
+}
+
+.mes-services-section-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 32px;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.mes-services-section-title h2 {
+  font-size: 24px;
+  font-weight: 600;
+  color: var(--mes-services-gray-800);
+  margin: 0 0 8px 0;
+}
+
+.mes-services-section-subtitle {
+  font-size: 16px;
+  color: var(--mes-services-gray-600);
+  margin: 0;
+}
+
+/* Bouton d'ajout principal */
+.mes-services-add-btn {
+  background: linear-gradient(135deg, var(--mes-services-primary), var(--mes-services-primary-light));
+  color: var(--mes-services-white);
+  border: none;
+  border-radius: 10px;
+  padding: 14px 24px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  transition: var(--mes-services-transition);
+  box-shadow: 0 4px 15px rgba(0, 123, 255, 0.3);
+}
+
+.mes-services-add-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(0, 123, 255, 0.4);
+}
+
+.mes-services-add-btn:active {
+  transform: translateY(0);
+}
+
+/* Grille des services */
+.mes-services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  gap: 24px;
+}
+
+/* Cartes de services */
+.mes-services-card {
+  background: var(--mes-services-white);
+  border-radius: var(--mes-services-border-radius);
+  border: 1px solid var(--mes-services-gray-200);
+  transition: var(--mes-services-transition);
+  overflow: hidden;
+  position: relative;
+}
+
+.mes-services-card:hover {
+  box-shadow: var(--mes-services-shadow-hover);
+  transform: translateY(-4px);
+  border-color: var(--mes-services-primary-light);
+}
+
+.mes-services-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 24px 24px 16px 24px;
+  border-bottom: 1px solid var(--mes-services-gray-100);
+  background: linear-gradient(135deg, #f8f9ff, #ffffff);
+}
+
+.mes-services-card-title {
+  font-size: 20px;
+  font-weight: 600;
+  color: var(--mes-services-gray-800);
+  margin: 0;
+  flex: 1;
+  line-height: 1.3;
+}
+
+.mes-services-card-actions {
+  display: flex;
+  gap: 8px;
+  margin-left: 16px;
+}
+
+.mes-services-edit-btn,
+.mes-services-delete-btn {
+  width: 60px;
+  height: 60px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: var(--mes-services-transition);
+}
+
+.mes-services-edit-btn {
+  background: var(--mes-services-gray-100);
+  color: var(--mes-services-primary);
+}
+
+.mes-services-edit-btn:hover {
+  background: var(--mes-services-primary);
+  color: var(--mes-services-white);
+  transform: scale(1.05);
+}
+
+.mes-services-delete-btn {
+  background: var(--mes-services-gray-100);
+  color: var(--mes-services-danger);
+}
+
+.mes-services-delete-btn:hover {
+  background: var(--mes-services-danger);
+  color: var(--mes-services-white);
+  transform: scale(1.05);
+}
+
+/* Contenu des cartes */
+.mes-services-card-content {
+  padding: 24px;
+}
+
+.mes-services-card-professional {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 14px;
+  color: var(--mes-services-primary);
+  font-weight: 600;
+  margin-bottom: 12px;
+}
+
+.mes-services-card-description {
+  font-size: 15px;
+  color: var(--mes-services-gray-600);
+  line-height: 1.6;
+  margin-bottom: 20px;
+  display: -webkit-box;
+  /* -webkit-line-clamp: 3; */
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.mes-services-card-details {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.mes-services-card-detail {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 14px;
+  color: var(--mes-services-gray-600);
+  padding: 8px 12px;
+  background: var(--mes-services-gray-100);
+  border-radius: 8px;
+}
+
+.mes-services-card-detail.mes-services-price {
+  background: linear-gradient(135deg, #e8f5e8, #f0f8f0);
+  color: var(--mes-services-success);
+  font-weight: 600;
+}
+
+/* État vide */
+.mes-services-empty-state {
+  text-align: center;
+  padding: 80px 40px;
+  grid-column: 1 / -1;
+}
+
+.mes-services-empty-icon {
+  margin-bottom: 24px;
+  color: var(--mes-services-gray-400);
+}
+
+.mes-services-empty-state h3 {
+  font-size: 24px;
+  font-weight: 600;
+  color: var(--mes-services-gray-700);
+  margin-bottom: 12px;
+}
+
+.mes-services-empty-state p {
+  font-size: 16px;
+  color: var(--mes-services-gray-600);
+  margin-bottom: 32px;
+  max-width: 400px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.mes-services-empty-btn {
+  background: linear-gradient(135deg, var(--mes-services-primary), var(--mes-services-primary-light));
+  color: var(--mes-services-white);
+  border: none;
+  border-radius: 10px;
+  padding: 16px 32px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  transition: var(--mes-services-transition);
+  box-shadow: 0 4px 15px rgba(0, 123, 255, 0.3);
+}
+
+.mes-services-empty-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(0, 123, 255, 0.4);
+}
+
+/* États de chargement et d'erreur */
+.mes-services-loading,
+.mes-services-error {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 400px;
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.mes-services-loading {
+  color: var(--mes-services-primary);
+}
+
+.mes-services-error {
+  color: var(--mes-services-danger);
+  background: #ffe6e6;
+  border-radius: var(--mes-services-border-radius);
+  padding: 20px;
+  margin: 20px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .mes-services-container {
+    padding: 16px;
+  }
+
+  .mes-services-header {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .mes-services-title {
+    font-size: 28px;
+  }
+
+  .mes-services-section-header {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .mes-services-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .mes-services-main-section {
+    padding: 24px 16px;
+  }
+
+  .mes-services-card-header {
+    padding: 20px 16px 12px 16px;
+  }
+
+  .mes-services-card-content {
+    padding: 20px 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  .mes-services-card-header {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 16px;
+  }
+
+  .mes-services-card-actions {
+    margin-left: 0;
+    justify-content: flex-end;
+  }
+}

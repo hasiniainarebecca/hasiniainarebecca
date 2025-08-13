@@ -1,0 +1,430 @@
+/* DoctorOnlineConsultationsList.css - Version modernisée */
+
+:root {
+  /* Couleurs principales inspirées du tableau de bord */
+  --doc-online-consultations-primary: #3B82F6;
+  --doc-online-consultations-primary-light: #DBEAFE;
+  --doc-online-consultations-primary-dark: #1D4ED8;
+  --doc-online-consultations-background: #F8FAFC;
+  --doc-online-consultations-card-bg: #FFFFFF;
+  --doc-online-consultations-text-primary: #1E293B;
+  --doc-online-consultations-text-secondary: #64748B;
+  --doc-online-consultations-text-muted: #94A3B8;
+  --doc-online-consultations-border: #E2E8F0;
+  --doc-online-consultations-border-light: #F1F5F9;
+  --doc-online-consultations-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+  --doc-online-consultations-shadow-hover: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+
+  /* Couleurs de statut */
+  --doc-online-consultations-status-prevue-bg: #DBEAFE;
+  --doc-online-consultations-status-prevue-text: #1D4ED8;
+  --doc-online-consultations-status-terminee-bg: #D1FAE5;
+  --doc-online-consultations-status-terminee-text: #059669;
+  --doc-online-consultations-status-annulee-bg: #FEE2E2;
+  --doc-online-consultations-status-annulee-text: #DC2626;
+
+  /* Couleurs des boutons d'action */
+  --doc-online-consultations-btn-start-bg: #10B981;
+  --doc-online-consultations-btn-start-hover: #059669;
+  --doc-online-consultations-btn-message-bg: #3B82F6;
+  --doc-online-consultations-btn-message-hover: #2563EB;
+  --doc-online-consultations-btn-cancel-bg: #EF4444;
+  --doc-online-consultations-btn-cancel-hover: #DC2626;
+}
+
+.dashboard-doctor-main-content{
+  padding: 3%;
+}
+
+.doc-online-consultations-wrapper {
+  display: flex;
+  min-height: 100vh;
+  background-color: var(--doc-online-consultations-background);
+}
+
+.doc-online-consultations-main {
+  flex: 1;
+  margin-left: 30px;
+}
+
+.doc-online-consultations-container {
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+/* Header Section */
+.doc-online-consultations-header {
+  margin-bottom: 32px;
+  text-align: center;
+}
+
+.doc-online-consultations-title {
+  font-size: 2.25rem;
+  color: var(--doc-online-consultations-text-primary);
+  margin: 0 0 8px 0;
+  line-height: 1.2;
+}
+
+.doc-online-consultations-subtitle {
+  font-size: 15px;
+  color: var(--doc-online-consultations-text-secondary);
+  margin: 0;
+  font-weight: 400;
+}
+
+/* Tab Navigation */
+.doc-online-consultations-tabs {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  margin-bottom: 32px;
+  background-color: var(--doc-online-consultations-border-light);
+  padding: 6px;
+  border-radius: 12px;
+  width: fit-content;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.doc-online-consultations-tab {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 20px;
+  border: none;
+  background: transparent;
+  color: var(--doc-online-consultations-text-secondary);
+  font-size: 0.95rem;
+  font-weight: 500;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  white-space: nowrap;
+}
+
+.doc-online-consultations-tab:hover {
+  color: var(--doc-online-consultations-primary);
+  background-color: rgba(59, 130, 246, 0.1);
+}
+
+.doc-online-consultations-tab.active {
+  background-color: var(--doc-online-consultations-card-bg);
+  color: var(--doc-online-consultations-primary);
+  box-shadow: var(--doc-online-consultations-shadow);
+}
+
+/* Consultations Grid */
+.doc-online-consultations-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(360px, 1fr));
+  gap: 24px;
+}
+
+/* Consultation Card */
+.doc-online-consultation-card {
+  background-color: var(--doc-online-consultations-card-bg);
+  border: 1px solid var(--doc-online-consultations-border);
+  border-radius: 16px;
+  padding: 24px;
+  box-shadow: var(--doc-online-consultations-shadow);
+  transition: all 0.2s ease;
+  position: relative;
+}
+
+.doc-online-consultation-card:hover {
+  box-shadow: var(--doc-online-consultations-shadow-hover);
+  transform: translateY(-2px);
+}
+
+/* Card Header */
+.doc-online-consultation-header {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 20px;
+  padding-bottom: 16px;
+  border-bottom: 1px solid var(--doc-online-consultations-border-light);
+}
+
+.doc-online-consultation-avatar {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--doc-online-consultations-primary), var(--doc-online-consultations-primary-dark));
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.25rem;
+  font-weight: 600;
+  flex-shrink: 0;
+}
+
+.doc-online-consultation-info {
+  flex: 1;
+  min-width: 0;
+}
+
+.doc-online-consultation-patient-name {
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: var(--doc-online-consultations-text-primary);
+  margin: 0 0 4px 0;
+  line-height: 1.3;
+}
+
+.doc-online-consultation-type {
+  font-size: 0.875rem;
+  color: var(--doc-online-consultations-text-secondary);
+  margin: 0;
+  line-height: 1.4;
+}
+
+/* Card Details */
+.doc-online-consultation-details {
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.doc-online-consultation-detail-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 0.9rem;
+}
+
+.doc-online-consultation-detail-icon {
+  color: var(--doc-online-consultations-primary);
+  flex-shrink: 0;
+}
+
+.doc-online-consultation-detail-label {
+  color: var(--doc-online-consultations-text-secondary);
+  min-width: 50px;
+}
+
+.doc-online-consultation-detail-value {
+  color: var(--doc-online-consultations-text-primary);
+  font-weight: 500;
+}
+
+/* Status Badge */
+.doc-online-consultation-status {
+  margin-bottom: 20px;
+}
+
+.doc-online-consultation-status-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 12px;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: 500;
+}
+
+.doc-online-consultation-status-prévue {
+  background-color: var(--doc-online-consultations-status-prevue-bg);
+  color: var(--doc-online-consultations-status-prevue-text);
+}
+
+.doc-online-consultation-status-terminée {
+  background-color: var(--doc-online-consultations-status-terminee-bg);
+  color: var(--doc-online-consultations-status-terminee-text);
+}
+
+.doc-online-consultation-status-annulée {
+  background-color: var(--doc-online-consultations-status-annulee-bg);
+  color: var(--doc-online-consultations-status-annulee-text);
+}
+
+/* Action Buttons */
+.doc-online-consultation-actions {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  padding-top: 16px;
+  border-top: 1px solid var(--doc-online-consultations-border-light);
+}
+
+.doc-online-consultation-btn {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 10px 16px;
+  border: none;
+  border-radius: 8px;
+  font-size: 0.875rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  flex: 1;
+  justify-content: center;
+  min-width: 0;
+}
+
+.doc-online-consultation-btn:hover:not(:disabled) {
+  transform: translateY(-1px);
+}
+
+.doc-online-consultation-btn-start {
+  background-color: var(--doc-online-consultations-btn-start-bg);
+  color: white;
+}
+
+.doc-online-consultation-btn-start:hover {
+  background-color: var(--doc-online-consultations-btn-start-hover);
+}
+
+.doc-online-consultation-btn-message {
+  background-color: var(--doc-online-consultations-btn-message-bg);
+  color: white;
+}
+
+.doc-online-consultation-btn-message:hover {
+  background-color: var(--doc-online-consultations-btn-message-hover);
+}
+
+.doc-online-consultation-btn-cancel {
+  background-color: var(--doc-online-consultations-btn-cancel-bg);
+  color: white;
+}
+
+.doc-online-consultation-btn-cancel:hover {
+  background-color: var(--doc-online-consultations-btn-cancel-hover);
+}
+
+.doc-online-consultation-btn-completed,
+.doc-online-consultation-btn-cancelled {
+  background-color: var(--doc-online-consultations-border-light);
+  color: var(--doc-online-consultations-text-muted);
+  cursor: not-allowed;
+}
+
+/* Empty State */
+.doc-online-consultations-empty {
+  grid-column: 1 / -1;
+  text-align: center;
+  padding: 60px 20px;
+  background-color: var(--doc-online-consultations-card-bg);
+  border: 2px dashed var(--doc-online-consultations-border);
+  border-radius: 16px;
+}
+
+.doc-online-consultations-empty-icon {
+  margin-bottom: 20px;
+  color: var(--doc-online-consultations-text-muted);
+}
+
+.doc-online-consultations-empty-title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: var(--doc-online-consultations-text-primary);
+  margin: 0 0 8px 0;
+}
+
+.doc-online-consultations-empty-text {
+  color: var(--doc-online-consultations-text-secondary);
+  margin: 0;
+  font-size: 0.95rem;
+}
+
+/* Responsive Design */
+@media (max-width: 1280px) {
+  .doc-online-consultations-main {
+    margin-left: 0;
+    padding: 24px;
+  }
+
+  .doc-online-consultations-grid {
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    gap: 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  .doc-online-consultations-main {
+    padding: 16px;
+  }
+
+  .doc-online-consultations-title {
+    font-size: 1.875rem;
+  }
+
+  .doc-online-consultations-subtitle {
+    font-size: 1rem;
+  }
+
+  .doc-online-consultations-tabs {
+    flex-direction: column;
+    width: 100%;
+    background: none;
+    padding: 0;
+    gap: 8px;
+  }
+
+  .doc-online-consultations-tab {
+    justify-content: center;
+    padding: 14px 20px;
+    background-color: var(--doc-online-consultations-card-bg);
+    border: 1px solid var(--doc-online-consultations-border);
+    border-radius: 12px;
+  }
+
+  .doc-online-consultations-tab.active {
+    background-color: var(--doc-online-consultations-primary);
+    color: white;
+    border-color: var(--doc-online-consultations-primary);
+  }
+
+  .doc-online-consultations-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .doc-online-consultation-card {
+    padding: 20px;
+  }
+
+  .doc-online-consultation-header {
+    flex-direction: column;
+    text-align: center;
+    gap: 12px;
+  }
+
+  .doc-online-consultation-actions {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .doc-online-consultation-btn {
+    flex: none;
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .doc-online-consultations-main {
+    padding: 12px;
+  }
+
+  .doc-online-consultations-title {
+    font-size: 1.5rem;
+  }
+
+  .doc-online-consultation-card {
+    padding: 16px;
+  }
+
+  .doc-online-consultation-avatar {
+    width: 48px;
+    height: 48px;
+    font-size: 1.1rem;
+  }
+
+  .doc-online-consultation-patient-name {
+    font-size: 1rem;
+  }
+}

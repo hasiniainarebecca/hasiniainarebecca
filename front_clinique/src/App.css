@@ -1,0 +1,142 @@
+
+.main-content {
+  flex-grow: 1;
+  transition: margin-left 0.3s ease;
+}
+
+/* Spécifique au Dashboard */
+.with-sidebar .main-content {
+  margin-left: 250px; /* Décale le contenu à droite du sidebar */
+  width: calc(100% - 250px); /* Ajuste la largeur */
+}
+
+/* Spécifique aux pages sans sidebar (Accueil, Inscription, Connexion) */
+.no-sidebar .main-content {
+  margin-left: 0;
+  width: 100%;
+}
+
+/* Assurez-vous que l’application est bien structurée */
+.app-container {
+  display: flex;
+  height: 100vh;
+}
+
+
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+  color: #007bff;
+  text-align: center;
+}
+
+.menu ul {
+  list-style: none;
+  padding: 0;
+}
+
+.menu li {
+  margin: 15px 0;
+}
+
+.menu a {
+  text-decoration: none;
+  font-size: 18px;
+  color: #007bff;
+  display: flex;
+  align-items: center;
+}
+
+.icon {
+  margin-right: 10px;
+}
+
+.bottom-section {
+  text-align: center;
+  padding-top: 20px;
+}
+
+.user-name {
+  font-weight: bold;
+  display: block;
+  margin-bottom: 10px;
+}
+
+.logout {
+  text-decoration: none;
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Mise à jour des styles pour ne pas avoir de décalage sur la page d'accueil et d'inscription */
+.home-container, .register-container {
+  margin-left: 0; /* Empêche le décalage à gauche */
+}
+
+.home-header, .register-header {
+  padding-left: 20px; /* Ajoute un peu de padding pour espacer */
+}
+
+
+
+/* Réinitialise le margin-left pour les pages sans sidebar */
+.main-content.full-width {
+  margin-left: 0;
+}
+
+
+
+.sidebar-header {
+  font-weight: bold;
+  text-align: center;
+  padding: 10px;
+  margin-bottom: 20px;
+  height: 50px;
+}
+
+.sidebar-menu li {
+  list-style-type: none;
+  padding: 10px;
+  margin-left: 15px;
+}
+
+.sidebar-menu a {
+  text-decoration: none;
+  color: #343a40;
+  font-size: 13px;
+  display: block;
+  transition: background-color 0.3s;
+}
+
+.sidebar-menu a.active {
+  color: #007bff;
+  border-radius: 4px;
+}
+
+.sidebar-footer p {
+  font-weight: bold;
+  margin-bottom: 30px;
+}
+
+.sidebar-footer {
+  text-align: center;
+  font-size: 16px;
+  margin-top: auto;
+  padding: 20px;
+}
+
+
+/* Réduction de la largeur pour les petits écrans */
+@media (max-width: 768px) {
+  .sidebar {
+    width: 100%;
+    height: auto;
+    position: absolute;
+  }
+  .main-content {
+    margin-left: 0;
+    width: 100%;
+  }
+}

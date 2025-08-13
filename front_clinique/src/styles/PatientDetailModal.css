@@ -1,0 +1,219 @@
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  overflow-y: auto; /* Enable scrolling for long content */
+}
+
+.modal-content {
+  background-color: var(--background);
+  border-radius: 10px;
+  box-shadow: var(--shadow);
+  padding: 30px;
+  width: 90%;
+  max-width: 700px;
+  position: relative;
+  animation: fadeInScale 0.3s ease-out; /* Simple animation */
+  max-height: 90vh; /* Limit height for scrollability */
+  overflow-y: auto; /* Enable scrolling within the modal content */
+}
+
+@keyframes fadeInScale {
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 25px;
+  border-bottom: 1px solid var(--border);
+  padding-bottom: 15px;
+}
+
+.modal-header h2 {
+  font-size: 28px;
+  color: var(--primary-dark);
+}
+
+.close-button {
+  background: none;
+  border: none;
+  font-size: 24px;
+  color: var(--text-light);
+  cursor: pointer;
+  transition: color 0.2s ease;
+}
+
+.close-button:hover {
+  color: var(--error);
+}
+
+.patient-details-sections {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+.section-overview {
+  display: flex;
+  align-items: center;
+  gap: 25px;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  padding: 20px;
+  border: 1px solid var(--border);
+}
+
+.patient-avatar-large {
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  background-color: var(--primary);
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 36px;
+  font-weight: bold;
+  flex-shrink: 0;
+}
+
+.patient-contact-info h3 {
+  font-size: 22px;
+  color: var(--text);
+  margin-bottom: 8px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.patient-contact-info p {
+  font-size: 15px;
+  color: var(--text-light);
+  margin-bottom: 5px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.patient-contact-info p svg {
+  color: var(--secondary);
+}
+
+.section {
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  padding: 20px;
+  border: 1px solid var(--border);
+}
+
+.section h3 {
+  font-size: 20px;
+  color: var(--text);
+  margin-bottom: 15px;
+  padding-bottom: 10px;
+  border-bottom: 1px dashed var(--border);
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.section h3 svg {
+  color: var(--primary);
+}
+
+.section ul {
+  list-style: none;
+  padding: 0;
+}
+
+.section ul li {
+  background-color: var(--background);
+  border: 1px solid var(--border);
+  border-radius: 5px;
+  padding: 12px;
+  margin-bottom: 10px;
+  font-size: 15px;
+  color: var(--text);
+  line-height: 1.4;
+}
+
+.section ul li:last-child {
+  margin-bottom: 0;
+}
+
+.section p {
+  font-size: 15px;
+  color: var(--text-light);
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.section .download-link {
+  color: var(--primary);
+  text-decoration: none;
+  font-weight: 500;
+  margin-left: 5px;
+}
+
+.section .download-link:hover {
+  text-decoration: underline;
+}
+
+/* Responsive adjustments */
+@media (max-width: 600px) {
+  .modal-content {
+    padding: 20px;
+  }
+
+  .modal-header h2 {
+    font-size: 24px;
+  }
+
+  .section-overview {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .patient-contact-info {
+    margin-top: 15px;
+  }
+
+  .patient-contact-info h3 {
+    justify-content: center;
+  }
+
+  .patient-contact-info p {
+    justify-content: center;
+  }
+
+  .section h3 {
+    font-size: 18px;
+  }
+
+  .section ul li {
+    font-size: 14px;
+    padding: 10px;
+  }
+
+  .section p {
+    font-size: 14px;
+  }
+}

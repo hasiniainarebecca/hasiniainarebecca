@@ -1,0 +1,436 @@
+/* Styles pour la page de modification des brouillons d'ordonnances */
+.edit-draft-page {
+    flex: 1;
+    padding: 30px;
+    background-color: var(--main-bg);
+    color: var(--text-primary);
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+  }
+  
+  /* En-tête de la page */
+  .edit-draft-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 24px;
+  }
+  
+  .back-button {
+    display: flex;
+    align-items: center;
+    padding: 8px 12px;
+    background-color: rgb(202, 198, 198);
+    border: 1px solid #e5e7eb;
+    border-radius: 4px;
+    color: #4b5563;
+    font-size: 14px;
+    cursor: pointer;
+    transition: all 0.2s;
+    margin-right: 16px;
+  }
+  
+  .back-button:hover {
+    background-color: #f9fafb;
+  }
+  
+  .back-button svg {
+    margin-right: 6px;
+  }
+  
+  .edit-draft-header h1 {
+    font-size: 24px;
+    font-weight: 600;
+    color: var(--text-primary);
+  }
+  
+  /* Carte d'information du patient */
+  .patient-info-card {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px;
+    background-color: var(--card-bg);
+    border-radius: 8px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    margin-bottom: 24px;
+  }
+  
+  .patient-info h2 {
+    font-size: 18px;
+    font-weight: 600;
+    color: var(--text-primary);
+    margin-bottom: 4px;
+  }
+  
+  .patient-id {
+    font-size: 14px;
+    color: var(--text-secondary);
+  }
+  
+  .draft-dates {
+    text-align: right;
+    font-size: 14px;
+    color: var(--text-secondary);
+  }
+  
+  .draft-dates p {
+    margin-bottom: 4px;
+  }
+  
+  /* Section d'édition */
+  .edit-section {
+    margin-bottom: 24px;
+  }
+  
+  .edit-section h3 {
+    font-size: 18px;
+    font-weight: 500;
+    color: var(--text-primary);
+    margin-bottom: 16px;
+  }
+  
+  /* Tableau des médicaments */
+  .medications-table-container {
+    background-color: var(--card-bg);
+    border-radius: 8px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    margin-bottom: 24px;
+  }
+  
+  .medications-table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  .medications-table th,
+  .medications-table td {
+    padding: 12px 16px;
+    text-align: left;
+    border-bottom: 1px solid var(--border-color);
+  }
+  
+  .medications-table th {
+    font-weight: 600;
+    font-size: 14px;
+    color: var(--text-secondary);
+    background-color: var(--hover-bg);
+  }
+  
+  .medications-table tbody tr:last-child td {
+    border-bottom: none;
+  }
+  
+  .remove-med-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 32px;
+    height: 32px;
+    border-radius: 4px;
+    background: none;
+    border: none;
+    color: #ef4444;
+    cursor: pointer;
+    transition: background-color 0.2s;
+  }
+  
+  .remove-med-button:hover {
+    background-color: rgba(239, 68, 68, 0.1);
+  }
+  
+  /* Section d'ajout de médicament */
+  .add-medication-section {
+    background-color: var(--card-bg);
+    border-radius: 8px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin-bottom: 24px;
+  }
+  
+  .add-medication-section h3 {
+    font-size: 18px;
+    font-weight: 500;
+    color: var(--text-primary);
+    margin-bottom: 16px;
+  }
+  
+  .add-medication-form {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+  
+  .form-row {
+    display: flex;
+    gap: 16px;
+  }
+  
+  .form-group {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .form-group label {
+    font-size: 14px;
+    color: var(--text-secondary);
+    margin-bottom: 6px;
+  }
+  
+  .form-group input,
+  .form-group select,
+  .form-group textarea {
+    padding: 10px 12px;
+    border-radius: 4px;
+    border: 1px solid var(--border-color);
+    background-color: var(--card-bg);
+    color: var(--text-primary);
+    font-size: 14px;
+  }
+  
+  .form-group input:focus,
+  .form-group select:focus,
+  .form-group textarea:focus {
+    outline: none;
+    border-color: var(--primary-color);
+  }
+  
+  .form-group input::placeholder,
+  .form-group textarea::placeholder {
+    color: var(--text-secondary);
+  }
+  
+  .add-button-container {
+    display: flex;
+    align-items: flex-end;
+  }
+  
+  .add-med-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 16px;
+    background-color: #3b82f6;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: opacity 0.2s, background-color 0.3s ease-in-out;
+  }
+  
+  .add-med-button:hover {
+    color: black;
+    opacity: 0.9;
+  }
+  
+  .add-med-button:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+  }
+  
+  .add-med-button svg {
+    margin-right: 6px;
+  }
+  
+  /* Section des notes pour le pharmacien */
+  .pharmacist-notes-section {
+    margin-bottom: 24px;
+  }
+  
+  .pharmacist-notes-section h3 {
+    font-size: 18px;
+    font-weight: 500;
+    color: var(--text-primary);
+    margin-bottom: 16px;
+  }
+  
+  .pharmacist-notes-section textarea {
+    width: 100%;
+    height: 100px;
+    padding: 12px;
+    border-radius: 8px;
+    border: 1px solid var(--border-color);
+    background-color: var(--card-bg);
+    color: var(--text-primary);
+    font-size: 14px;
+    resize: vertical;
+  }
+  
+  .pharmacist-notes-section textarea:focus {
+    outline: none;
+    border-color: var(--primary-color);
+  }
+  
+  /* Actions de la page */
+  .edit-draft-actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 16px;
+    margin-top: auto;
+    padding-top: 24px;
+  }
+  
+  .save-draft-button,
+  .send-prescription-button {
+    display: flex;
+    align-items: center;
+    padding: 10px 16px;
+    border-radius: 4px;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s;
+  }
+  
+  .save-draft-button {
+    display: flex;
+    align-items: center;
+    background-color: white;
+    color: #4b5563;
+    border: 1px solid #e5e7eb;
+    border-radius: 0.375rem;
+    padding: 0.5rem 1rem;
+    font-size: 0.875rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.2s;
+  }
+  
+  .save-draft-button:hover {
+    background-color: var(--border-color);
+  }
+  
+  .send-prescription-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 16px;
+    border-radius: 4px;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.2s, opacity 0.2s ease-in-out; /* Transition plus fluide */
+    background-color: #3b82f6; /* Définir la couleur de fond */
+    border: 1px solid var(--primary-color); /* Assurez-vous qu'il y a une bordure */
+    color: white;
+  }
+  
+  .send-prescription-button:hover {
+    opacity: 0.9;
+    color: black;
+    background-color: darken(#3b82f6, 10%);
+  }
+  
+  .save-draft-button svg,
+  .send-prescription-button svg {
+    margin-right: 8px;
+  }
+  
+  /* Adaptations pour le thème sombre */
+  .dark-theme .back-button:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+  }
+  
+  .dark-theme .medications-table th {
+    background-color: rgba(255, 255, 255, 0.05);
+  }
+  
+  .dark-theme .remove-med-button:hover {
+    background-color: rgba(239, 68, 68, 0.2);
+  }
+  
+  .dark-theme .form-group input,
+  .dark-theme .form-group select,
+  .dark-theme .form-group textarea {
+    background-color: rgba(255, 255, 255, 0.05);
+  }
+  
+  .dark-theme .save-draft-button {
+    background-color: rgba(255, 255, 255, 0.1);
+  }
+  
+  .dark-theme .save-draft-button:hover {
+    background-color: rgba(255, 255, 255, 0.15);
+  }
+  
+  /* Styles responsive */
+  @media (max-width: 992px) {
+    .form-row {
+      flex-direction: column;
+      gap: 12px;
+    }
+    
+    .add-button-container {
+      margin-top: 8px;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .edit-draft-page {
+      padding: 20px;
+    }
+    
+    .edit-draft-header {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 12px;
+    }
+    
+    .patient-info-card {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 12px;
+    }
+    
+    .draft-dates {
+      text-align: left;
+    }
+    
+    .medications-table {
+      display: block;
+      overflow-x: auto;
+    }
+    
+    .edit-draft-actions {
+      flex-direction: column;
+      gap: 12px;
+    }
+    
+    .save-draft-button,
+    .send-prescription-button {
+      width: 100%;
+      justify-content: center;
+    }
+  }
+  
+  @media (max-width: 576px) {
+    .back-button span {
+      display: none;
+    }
+    
+    .back-button svg {
+      margin-right: 0;
+    }
+    
+    .add-med-button span {
+      display: none;
+    }
+    
+    .add-med-button svg {
+      margin-right: 0;
+    }
+    
+    .save-draft-button span,
+    .send-prescription-button span {
+      display: none;
+    }
+    
+    .save-draft-button svg,
+    .send-prescription-button svg {
+      margin-right: 0;
+    }
+  }

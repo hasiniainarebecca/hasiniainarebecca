@@ -1,0 +1,399 @@
+/* Styles généraux */
+.commands-container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.commands-header {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+}
+
+.commands-header h1 {
+  font-size: 1.8rem;
+  margin-bottom: 15px;
+  color: var(--text);
+}
+
+/* Styles des onglets */
+.commands-tabs {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+  border-bottom: 1px solid var(--border);
+  padding-bottom: 10px;
+}
+
+.tab-btn {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 16px;
+  border: none;
+  background-color: transparent;
+  border-radius: 6px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: var(--text-light);
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.tab-btn:hover {
+  background-color: var(--background-hover);
+}
+
+.tab-btn.active {
+  background-color: var(--primary-light);
+  color: var(--primary);
+  font-weight: 600;
+}
+
+/* Filtres */
+.commands-filters {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+.search-container-ord,
+.filter-container-ord {
+  display: flex;
+  align-items: center;
+  background-color: var(--background);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 8px 12px;
+}
+
+.search-container-ord {
+  flex: 1;
+}
+
+.search-container-ord input {
+  flex: 1;
+  border: none;
+  background: transparent;
+  margin-left: 8px;
+  font-size: 0.9rem;
+  color: var(--text);
+}
+
+.search-container-ord input:focus {
+  outline: none;
+}
+
+.filter-container-ord select {
+  border: none;
+  background: transparent;
+  font-size: 0.9rem;
+  color: var(--text);
+  margin-left: 8px;
+  padding-right: 20px;
+}
+
+.filter-container-ord select:focus {
+  outline: none;
+}
+
+/* Tableau */
+.commands-table {
+  background-color: var(--background);
+  border-radius: 8px;
+  box-shadow: 0 2px 8px var(--shadow);
+  overflow: hidden;
+  margin-bottom: 20px;
+  height: 460px;
+  max-height: 460px;
+  overflow-y: auto;
+}
+
+.commands-table table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.commands-table th,
+.commands-table td {
+  padding: 12px 16px;
+  text-align: left;
+  border-bottom: 1px solid var(--border);
+}
+
+.commands-table th {
+  font-weight: 600;
+  color: var(--text-light);
+  background-color: var(--background-alt);
+  font-size: 0.85rem;
+}
+
+.commands-table td {
+  font-size: 0.9rem;
+  color: var(--text);
+}
+
+.commands-table tr:last-child td {
+  border-bottom: none;
+}
+
+.commands-table tr:hover td {
+  background-color: var(--background-hover);
+}
+
+/* Badges de statut */
+.status-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-size: 0.8rem;
+  font-weight: 500;
+}
+
+.status-pending {
+  background-color: #fff8e1;
+  color: #f57c00;
+}
+
+.status-completed {
+  background-color: #e8f5e9;
+  color: #2e7d32;
+}
+
+.status-rejected {
+  background-color: #ffebee;
+  color: #c62828;
+}
+
+/* Badges pour ordonnance requise */
+.prescription-required {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  color: #d32f2f;
+  font-weight: 500;
+  font-size: 0.85rem;
+}
+
+.prescription-not-required {
+  color: #388e3c;
+  font-weight: 500;
+  font-size: 0.85rem;
+}
+
+/* Cellule d'actions */
+.actions-cell {
+  display: flex;
+  gap: 8px;
+}
+
+.view-btn,
+.approve-btn,
+.reject-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 6px 10px;
+  border: none;
+  border-radius: 4px;
+  font-size: 0.8rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.view-btn {
+  background-color: var(--background-alt);
+  color: var(--text);
+}
+
+.view-btn:hover {
+  background-color: var(--background-hover);
+}
+
+.approve-btn {
+  background-color: #e8f5e9;
+  color: #2e7d32;
+}
+
+.approve-btn:hover {
+  background-color: #c8e6c9;
+}
+
+.reject-btn {
+  background-color: #ffebee;
+  color: #c62828;
+}
+
+.reject-btn:hover {
+  background-color: #ffcdd2;
+}
+
+/* Modal */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modal-content {
+  background-color: var(--background);
+  border-radius: 8px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+  width: 90%;
+  max-width: 800px;
+  max-height: 90vh;
+  overflow-y: auto;
+  padding: 24px;
+}
+
+.modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  padding-bottom: 15px;
+  border-bottom: 1px solid var(--border);
+}
+
+.modal-header h2 {
+  font-size: 1.5rem;
+  color: var(--text);
+}
+
+/* Détails de l'ordonnance et de la commande */
+.prescription-details,
+.order-details {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.detail-section {
+  margin-bottom: 20px;
+}
+
+.detail-section h3 {
+  font-size: 1.1rem;
+  color: var(--primary);
+  margin-bottom: 10px;
+}
+
+.detail-section p {
+  margin-bottom: 8px;
+  font-size: 0.9rem;
+  color: var(--text);
+}
+
+.detail-section strong {
+  font-weight: 600;
+}
+
+.medications-list {
+  grid-column: 1 / -1;
+}
+
+.medications-list table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+}
+
+.medications-list th,
+.medications-list td {
+  padding: 10px;
+  text-align: left;
+  border-bottom: 1px solid var(--border);
+  font-size: 0.9rem;
+}
+
+.medications-list th {
+  font-weight: 600;
+  color: var(--text-light);
+  background-color: var(--background-alt);
+}
+
+/* Section d'avertissement */
+.warning-section {
+  grid-column: 1 / -1;
+  background-color: #fff8e1;
+  border-radius: 6px;
+  padding: 15px;
+  border-left: 4px solid #f57c00;
+}
+
+.warning-text {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #e65100;
+}
+
+/* Actions du modal */
+.modal-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  margin-top: 20px;
+  padding-top: 20px;
+  border-top: 1px solid var(--border);
+}
+
+.close-btn,
+.modal-actions .approve-btn,
+.modal-actions .reject-btn {
+  padding: 8px 16px;
+  font-size: 0.9rem;
+}
+
+.close-btn {
+  background-color: var(--background-alt);
+  color: var(--text);
+}
+
+/* État de chargement */
+.loading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 200px;
+  font-size: 1rem;
+  color: var(--text-light);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .commands-filters {
+    flex-direction: column;
+  }
+
+  .commands-table th,
+  .commands-table td {
+    padding: 10px 8px;
+  }
+
+  .actions-cell {
+    flex-direction: column;
+  }
+
+  .prescription-details,
+  .order-details {
+    grid-template-columns: 1fr;
+  }
+
+  .modal-content {
+    width: 95%;
+    padding: 16px;
+  }
+}

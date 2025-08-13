@@ -1,0 +1,130 @@
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modal-content {
+  background-color: var(--background);
+  border-radius: 8px;
+  box-shadow: var(--shadow);
+  padding: 30px;
+  width: 90%;
+  max-width: 500px;
+  position: relative;
+}
+
+.modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.modal-header h3 {
+  font-size: 24px;
+  color: var(--text);
+}
+
+.close-button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  /* Removed font-size, color, line-height as they are handled by lucide-react */
+}
+
+.close-button:hover svg { /* Target the SVG inside the button on hover */
+  color: var(--text);
+}
+
+.modal-description {
+  color: var(--text-light);
+  margin-bottom: 25px;
+  font-size: 15px;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  display: block;
+  font-size: 16px;
+  color: var(--text);
+  margin-bottom: 8px;
+  font-weight: 500;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid var(--border);
+  border-radius: 5px;
+  font-size: 16px;
+  color: var(--text);
+  background-color: #f9f9f9;
+}
+
+.form-group input[type="text"]::placeholder,
+.form-group textarea::placeholder {
+  color: var(--text-light);
+}
+
+.form-group input[type="text"]:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: var(--primary);
+  box-shadow: 0 0 0 3px rgba(var(--primary-rgb), 0.2); /* Assuming you define --primary-rgb in :root */
+}
+
+.form-group textarea {
+  resize: vertical; /* Allow vertical resizing */
+  min-height: 80px;
+}
+
+.modal-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 15px;
+  margin-top: 30px;
+}
+
+.cancel-button,
+.add-button {
+  border: none;
+  border-radius: 5px;
+  padding: 12px 25px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  font-weight: 500;
+}
+
+.cancel-button {
+  /* background-color: var(--secondary-light); */
+  color: var(--text-light);
+}
+
+.cancel-button:hover {
+  background-color: #e0e0e0;
+}
+
+.add-button {
+  background-color: var(--primary);
+  color: white;
+}
+
+.add-button:hover {
+  background-color: var(--primary-dark);
+  box-shadow: 0 4px 8px rgba(var(--primary-rgb), 0.2);
+}

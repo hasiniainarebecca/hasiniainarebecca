@@ -1,0 +1,338 @@
+.dashboard-doctor-main-content{
+  padding: 3%;
+  height: 750px;
+  overflow-y: auto;
+}
+
+/* Styles pour la page des brouillons d'ordonnances */
+.draft-prescriptions-page {
+    flex: 1;
+    padding: 30px;
+    background-color: var(--main-bg);
+    color: var(--text-primary);
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+  }
+  
+  /* En-tête de la page */
+  .drafts-header {
+    margin-bottom: 24px;
+  }
+  
+  .drafts-header h1 {
+    font-size: 24px;
+    font-weight: 600;
+    color: var(--text-primary);
+    margin-bottom: 8px;
+  }
+  
+  .drafts-description {
+    font-size: 14px;
+    color: var(--text-secondary);
+  }
+  
+  /* Barre de recherche */
+  .search-container {
+    position: relative;
+    margin-bottom: 20px;
+  }
+  
+  .search-icon {
+    position: absolute;
+    left: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: var(--text-secondary);
+  }
+  
+  .search-input {
+    width: 100%;
+    padding: 12px 12px 12px 40px;
+    border-radius: 6px;
+    border: 1px solid var(--border-color);
+    background-color: var(--card-bg);
+    color: var(--text-primary);
+    font-size: 14px;
+  }
+  
+  .search-input::placeholder {
+    color: var(--text-secondary);
+  }
+  
+  .search-input:focus {
+    outline: none;
+    border-color: var(--primary-color);
+  }
+  
+  /* Compteur de brouillons */
+  .drafts-count {
+    font-size: 14px;
+    color: var(--text-secondary);
+    margin-bottom: 16px;
+  }
+  
+  /* Liste des brouillons */
+  .drafts-list {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+  
+  /* Carte de brouillon */
+  .draft-card {
+    background-color: var(--card-bg);
+    border-radius: 8px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+  }
+  
+  .draft-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px;
+    border-bottom: 1px solid var(--border-color);
+  }
+  
+  .patient-name {
+    font-size: 18px;
+    font-weight: 600;
+    color: var(--text-primary);
+  }
+  
+  .draft-actions {
+    display: flex;
+    gap: 8px;
+  }
+  
+  .action-button {
+    display: flex;
+    align-items: center;
+    padding: 6px 12px;
+    border-radius: 4px;
+    font-size: 13px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.2s;
+    border: none;
+  }
+  
+  .action-button svg {
+    margin-right: 6px;
+  }
+  
+  .action-button.edit {
+    background-color: #4CAF50;
+    color: white;
+  }
+  
+  .action-button.delete {
+    background-color: rgba(239, 68, 68, 0.1);
+    color: #ef4444;
+  }
+  
+  .action-button.edit:hover {
+    opacity: 0.9;
+  }
+  
+  .action-button.delete:hover {
+    background-color: rgba(239, 68, 68, 0.2);
+  }
+  
+  /* Métadonnées du brouillon */
+  .draft-meta {
+    display: flex;
+    gap: 16px;
+    padding: 12px 16px;
+    background-color: var(--hover-bg);
+    border-bottom: 1px solid var(--border-color);
+  }
+  
+  .meta-item {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 13px;
+    color: var(--text-secondary);
+  }
+  
+  /* Liste des médicaments */
+  .medications-list {
+    padding: 16px;
+    border-bottom: 1px solid var(--border-color);
+  }
+  
+  .medications-list h3 {
+    font-size: 16px;
+    font-weight: 500;
+    margin-bottom: 12px;
+    color: var(--text-primary);
+  }
+  
+  .medications-table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  .medications-table th,
+  .medications-table td {
+    padding: 10px;
+    text-align: left;
+    border-bottom: 1px solid var(--border-color);
+  }
+  
+  .medications-table th {
+    font-weight: 600;
+    font-size: 13px;
+    color: var(--text-secondary);
+  }
+  
+  .medications-table td {
+    font-size: 14px;
+    color: var(--text-primary);
+  }
+  
+  .medications-table tr:last-child td {
+    border-bottom: none;
+  }
+  
+  /* Pied de la carte */
+  .draft-footer {
+    padding: 16px;
+    display: flex;
+    justify-content: flex-end;
+  }
+  
+  .send-button {
+    display: flex;
+    align-items: center;
+    padding: 8px 16px;
+    background-color: #3b82f6;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.2s;
+  }
+  
+  .send-button:hover {
+    color: black;
+    opacity: 0.9;
+  }
+  
+  .send-button svg {
+    margin-right: 8px;
+  }
+  
+  /* Message quand aucun brouillon n'est trouvé */
+  .no-drafts {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 48px 24px;
+    background-color: var(--card-bg);
+    border-radius: 8px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  }
+  
+  .no-drafts-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background-color: var(--hover-bg);
+    color: var(--text-secondary);
+    margin-bottom: 16px;
+  }
+  
+  .no-drafts h3 {
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 8px;
+    color: var(--text-primary);
+  }
+  
+  .no-drafts p {
+    font-size: 14px;
+    color: var(--text-secondary);
+    max-width: 400px;
+    line-height: 1.5;
+  }
+  
+  /* Adaptations pour le thème sombre */
+  .dark-theme .action-button.delete {
+    background-color: rgba(239, 68, 68, 0.2);
+  }
+  
+  .dark-theme .action-button.delete:hover {
+    background-color: rgba(239, 68, 68, 0.3);
+  }
+  
+  .dark-theme .draft-meta {
+    background-color: rgba(255, 255, 255, 0.05);
+  }
+  
+  .dark-theme .no-drafts-icon {
+    background-color: rgba(255, 255, 255, 0.05);
+  }
+  
+  /* Styles responsive */
+  @media (max-width: 768px) {
+    .draft-prescriptions-page {
+      padding: 20px;
+    }
+    
+    .draft-header {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 12px;
+    }
+    
+    .draft-actions {
+      width: 100%;
+      justify-content: flex-end;
+    }
+    
+    .draft-meta {
+      flex-direction: column;
+      gap: 8px;
+    }
+    
+    .medications-table {
+      display: block;
+      overflow-x: auto;
+    }
+  }
+  
+  @media (max-width: 576px) {
+    .action-button span {
+      display: none;
+    }
+    
+    .action-button svg {
+      margin-right: 0;
+    }
+    
+    .action-button {
+      padding: 8px;
+    }
+    
+    .send-button span {
+      display: none;
+    }
+    
+    .send-button svg {
+      margin-right: 0;
+    }
+    
+    .send-button {
+      padding: 8px;
+    }
+  }

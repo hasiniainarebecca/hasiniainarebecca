@@ -1,0 +1,369 @@
+/* PrescriptionsPage.css */
+:root {
+  --patient-prescriptions-primary: #3b82f6;
+  --patient-prescriptions-primary-hover: #2563eb;
+  --patient-prescriptions-secondary: #64748b;
+  --patient-prescriptions-border: #e2e8f0;
+  --patient-prescriptions-card-bg: #ffffff;
+  --patient-prescriptions-text-primary: #1e293b;
+  --patient-prescriptions-text-secondary: #64748b;
+  --patient-prescriptions-error: #ef4444;
+  --patient-prescriptions-success: #10b981;
+  --patient-prescriptions-warning: #f59e0b;
+  --patient-prescriptions-hover-bg: #f8fafc;
+}
+
+.patient-prescriptions-container {
+  height: 739px;
+  overflow-y: auto;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.patient-prescriptions-header {
+  margin-bottom: 2rem;
+}
+
+.patient-prescriptions-title {
+  font-size: 2rem;
+  font-weight: 600;
+  color: var(--patient-prescriptions-text-primary);
+  margin-bottom: 1.5rem;
+}
+
+.patient-prescriptions-tabs {
+  display: flex;
+  border-bottom: 1px solid var(--patient-prescriptions-border);
+  margin-bottom: 1.5rem;
+}
+
+.patient-prescriptions-tab {
+  padding: 0.75rem 1.5rem;
+  background: none;
+  border: none;
+  font-size: 1rem;
+  font-weight: 500;
+  color: var(--patient-prescriptions-secondary);
+  cursor: pointer;
+  position: relative;
+  transition: all 0.2s ease;
+}
+
+.patient-prescriptions-tab:hover {
+  color: var(--patient-prescriptions-primary);
+}
+
+.patient-prescriptions-tab.active {
+  color: var(--patient-prescriptions-primary);
+  font-weight: 600;
+}
+
+.patient-prescriptions-tab.active::after {
+  content: "";
+  position: absolute;
+  bottom: -1px;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background-color: var(--patient-prescriptions-primary);
+}
+
+.patient-prescriptions-content-wrapper {
+  background-color: var(--patient-prescriptions-card-bg);
+  border-radius: 0.5rem;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  padding: 1.5rem;
+}
+
+.patient-prescriptions-loading {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  color: var(--patient-prescriptions-text-secondary);
+}
+
+.patient-prescriptions-spinner {
+  border: 4px solid rgba(0, 0, 0, 0.1);
+  border-radius: 50%;
+  border-top: 4px solid var(--patient-prescriptions-primary);
+  width: 40px;
+  height: 40px;
+  animation: patient-prescriptions-spin 1s linear infinite;
+  margin-bottom: 1rem;
+}
+
+@keyframes patient-prescriptions-spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.patient-prescriptions-section {
+  margin-bottom: 2rem;
+}
+
+.patient-prescriptions-subtitle {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: var(--patient-prescriptions-text-primary);
+  margin-bottom: 0.5rem;
+}
+
+.patient-prescriptions-count {
+  color: var(--patient-prescriptions-text-secondary);
+  font-size: 0.875rem;
+  margin-bottom: 1.5rem;
+}
+
+.patient-prescriptions-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.patient-prescriptions-empty {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 3rem;
+  color: var(--patient-prescriptions-text-secondary);
+  background-color: var(--patient-prescriptions-hover-bg);
+  border-radius: 0.5rem;
+  text-align: center;
+}
+
+.patient-prescriptions-empty-icon {
+  margin-bottom: 1rem;
+  color: var(--patient-prescriptions-secondary);
+}
+
+/* Prescription Card Styles */
+.patient-prescription-card {
+  background-color: var(--patient-prescriptions-card-bg);
+  border: 1px solid var(--patient-prescriptions-border);
+  border-radius: 0.5rem;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+  overflow: hidden;
+}
+
+.patient-prescription-card.expired {
+  opacity: 0.8;
+  background-color: #fef2f2;
+}
+
+.patient-prescription-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 1.5rem;
+  background-color: #f8fafc;
+  border-bottom: 1px solid var(--patient-prescriptions-border);
+}
+
+.patient-prescription-doctor-info {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+}
+
+.patient-prescription-file-icon {
+  color: var(--patient-prescriptions-primary);
+  margin-top: 0.25rem;
+}
+
+.patient-prescription-doctor-name {
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: var(--patient-prescriptions-text-primary);
+  margin-bottom: 0.25rem;
+}
+
+.patient-prescription-doctor-specialty {
+  font-size: 0.875rem;
+  color: var(--patient-prescriptions-text-secondary);
+}
+
+.patient-prescription-dates {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.patient-prescription-date-item {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.875rem;
+  color: var(--patient-prescriptions-text-primary);
+}
+
+.patient-prescription-date-icon {
+  color: var(--patient-prescriptions-secondary);
+}
+
+.patient-prescription-renewals {
+  font-size: 0.8125rem;
+  color: var(--patient-prescriptions-text-secondary);
+  margin-top: 0.5rem;
+  text-align: right;
+}
+
+.patient-prescription-medications {
+  padding: 1.5rem;
+}
+
+.patient-prescription-medications-title {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--patient-prescriptions-text-primary);
+  margin-bottom: 1rem;
+}
+
+.patient-prescription-medication {
+  margin-bottom: 1rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid var(--patient-prescriptions-border);
+}
+
+.patient-prescription-medication:last-child {
+  margin-bottom: 0;
+  padding-bottom: 0;
+  border-bottom: none;
+}
+
+.patient-prescription-medication-name {
+  font-size: 0.9375rem;
+  font-weight: 600;
+  color: var(--patient-prescriptions-text-primary);
+  margin-bottom: 0.25rem;
+}
+
+.patient-prescription-medication-detail {
+  font-size: 0.875rem;
+  color: var(--patient-prescriptions-text-secondary);
+  margin-bottom: 0.25rem;
+}
+
+.patient-prescription-pharmacy-selector {
+  padding: 0 1.5rem 1.5rem;
+}
+
+.patient-prescription-pharmacy-label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-size: 0.875rem;
+  color: var(--patient-prescriptions-text-primary);
+}
+
+.patient-prescription-pharmacy-select {
+  width: 100%;
+  padding: 0.5rem 0.75rem;
+  border: 1px solid var(--patient-prescriptions-border);
+  border-radius: 0.375rem;
+  font-size: 0.875rem;
+  color: var(--patient-prescriptions-text-primary);
+  background-color: white;
+  transition: border-color 0.2s;
+}
+
+.patient-prescription-pharmacy-select:focus {
+  outline: none;
+  border-color: var(--patient-prescriptions-primary);
+}
+
+.patient-prescription-actions {
+  display: flex;
+  gap: 0.75rem;
+  padding: 1rem 1.5rem;
+  border-top: 1px solid var(--patient-prescriptions-border);
+  background-color: #f8fafc;
+  flex-wrap: wrap;
+}
+
+.patient-prescription-action {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.5rem 1rem;
+  border-radius: 0.375rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  border: 1px solid var(--patient-prescriptions-border);
+  gap: 0.5rem;
+}
+
+.patient-prescription-action:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+.patient-prescription-action-icon {
+  width: 1rem;
+  height: 1rem;
+}
+
+.patient-prescription-download {
+  background-color: white;
+  color: var(--patient-prescriptions-text-primary);
+  border: 1px solid var(--patient-prescriptions-border);
+}
+
+.patient-prescription-download:hover {
+  background-color: var(--patient-prescriptions-hover-bg);
+}
+
+.patient-prescription-order {
+  background-color: var(--patient-prescriptions-primary);
+  color: white;
+  border: none;
+}
+
+.patient-prescription-order:hover {
+  background-color: var(--patient-prescriptions-primary-hover);
+}
+
+.patient-prescription-renew {
+  background-color: white;
+  color: var(--patient-prescriptions-text-primary);
+  border: 1px solid var(--patient-prescriptions-border);
+}
+
+.patient-prescription-renew:hover {
+  background-color: var(--patient-prescriptions-hover-bg);
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .patient-prescriptions-container {
+    padding: 1rem;
+  }
+  
+  .patient-prescription-header {
+    flex-direction: column;
+    gap: 1rem;
+  }
+  
+  .patient-prescription-dates {
+    align-items: flex-start;
+    width: 100%;
+  }
+  
+  .patient-prescription-renewals {
+    text-align: left;
+  }
+  
+  .patient-prescription-actions {
+    flex-direction: column;
+  }
+  
+  .patient-prescription-action {
+    width: 100%;
+  }
+}

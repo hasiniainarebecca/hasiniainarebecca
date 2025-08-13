@@ -1,0 +1,320 @@
+/* Variables CSS spécifiques au sidebar doctor */
+:root {
+  --sidebar-doctor-primary: #1976d2;
+  --sidebar-doctor-primary-light: #42a5f5;
+  --sidebar-doctor-primary-dark: #1565c0;
+  --sidebar-doctor-white: #ffffff;
+  --sidebar-doctor-gray-50: #fafafa;
+  --sidebar-doctor-gray-100: #f5f5f5;
+  --sidebar-doctor-gray-200: #eeeeee;
+  --sidebar-doctor-gray-300: #e0e0e0;
+  --sidebar-doctor-gray-400: #bdbdbd;
+  --sidebar-doctor-gray-500: #9e9e9e;
+  --sidebar-doctor-gray-600: #757575;
+  --sidebar-doctor-gray-700: #616161;
+  --sidebar-doctor-gray-800: #424242;
+  --sidebar-doctor-gray-900: #212121;
+  --sidebar-doctor-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  --sidebar-doctor-shadow-light: 0 2px 8px rgba(0, 0, 0, 0.05);
+  --sidebar-doctor-border-radius: 12px;
+  --sidebar-doctor-border-radius-small: 8px;
+}
+
+/* Ajoutez ces styles à la fin de votre fichier CSS */
+
+.notification-menu-item {
+    position: relative !important;
+    display: flex !important;
+    align-items: center !important;
+}
+
+.notification-badge {
+    position: absolute !important;
+    right: -30px !important;
+    bottom: 900px;
+    /* top: px !important; */
+    background-color: #ff5252 !important;
+    color: white !important;
+    border-radius: 50% !important;
+    width: 20px !important;
+    height: 20px !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    font-size: 0.7rem !important;
+    font-weight: bold !important;
+    animation: pulse 1.5s infinite !important;
+    z-index: 10 !important;
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+/* Sidebar principal */
+.sidebar-doctor {
+  display: flex;
+  flex-direction: column;
+  width: 280px;
+  height: auto;
+  /* height: 100vh; */
+  background: linear-gradient(135deg, var(--sidebar-doctor-primary) 0%, var(--sidebar-doctor-primary-dark) 100%);
+  box-shadow: var(--sidebar-doctor-shadow);
+  font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  position: relative;
+  overflow: hidden;
+}
+
+.sidebar-doctor::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0.05) 100%);
+  pointer-events: none;
+}
+
+/* Header du sidebar */
+.sidebar-doctor-header {
+  padding: 1.5rem 1.5rem 1rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  position: relative;
+  z-index: 2;
+}
+
+.sidebar-doctor-header h2 {
+  display: flex;
+  align-items: center;
+  margin: 0;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--sidebar-doctor-white);
+  letter-spacing: 0.5px;
+}
+
+.sidebar-doctor-header h2 .login-icon {
+  width: 32px !important;
+  height: 32px !important;
+  margin-right: 12px;
+  margin-bottom: 0;
+  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.2));
+}
+
+/* Menu du sidebar */
+.sidebar-doctor-menu {
+  text-decoration: none;
+  flex: 1;
+  padding: 1rem 0;
+  overflow-y: auto;
+  list-style: none;
+  margin: 0;
+  position: relative;
+  z-index: 2;
+}
+
+.sidebar-doctor-menu::-webkit-scrollbar {
+  width: 4px;
+}
+
+.sidebar-doctor-menu::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.sidebar-doctor-menu::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.3);
+  border-radius: 4px;
+}
+
+.sidebar-doctor-menu::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 255, 255, 0.5);
+}
+
+.sidebar-doctor-menu li {
+  margin: 0.25rem 1rem;
+}
+
+.sidebar-doctor-menu a {
+  display: flex;
+  align-items: center;
+  padding: 0.875rem 1rem;
+  color: rgba(255, 255, 255, 0.85);
+  text-decoration: none;
+  border-radius: var(--sidebar-doctor-border-radius-small);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  font-weight: 500;
+  font-size: 0.95rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.sidebar-doctor-menu a::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.1), transparent);
+  transition: left 0.5s;
+}
+
+.sidebar-doctor-menu a:hover::before {
+  left: 100%;
+}
+
+.sidebar-doctor-menu a:hover {
+  background: rgba(255, 255, 255, 0.15);
+  color: var(--sidebar-doctor-white);
+  transform: translateX(4px);
+  box-shadow: var(--sidebar-doctor-shadow-light);
+}
+
+.sidebar-doctor-menu a.active {
+  background: var(--sidebar-doctor-white);
+  color: var(--sidebar-doctor-primary);
+  font-weight: 600;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.sidebar-doctor-menu a.active::before {
+  display: none;
+}
+
+.sidebar-doctor-menu a .icon {
+  width: 20px !important;
+  height: 20px !important;
+  margin-right: 0.875rem;
+  flex-shrink: 0;
+  transition: transform 0.3s ease;
+}
+
+.sidebar-doctor-menu a:hover .icon {
+  transform: scale(1.1);
+}
+
+.sidebar-doctor-menu a.active .icon {
+  transform: scale(1.05);
+}
+
+/* Footer du sidebar */
+.sidebar-doctor-footer {
+  padding: 1.5rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+  position: relative;
+  z-index: 2;
+}
+
+.sidebar-doctor-footer p {
+  margin: 0 0 1rem 0;
+  color: var(--sidebar-doctor-white);
+  font-weight: 600;
+  font-size: 0.95rem;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.sidebar-doctor-logout-button {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  padding: 0.75rem 1rem;
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: var(--sidebar-doctor-border-radius-small);
+  color: var(--sidebar-doctor-white);
+  font-size: 0.9rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  backdrop-filter: blur(10px);
+}
+
+.sidebar-doctor-logout-button:hover {
+  background: rgba(255, 255, 255, 0.2);
+  border-color: rgba(255, 255, 255, 0.3);
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.sidebar-doctor-logout-button:active {
+  transform: translateY(0);
+}
+
+.sidebar-doctor-logout-button .icon {
+  width: 18px !important;
+  height: 18px !important;
+  margin-right: 0.5rem;
+  transition: transform 0.3s ease;
+}
+
+.sidebar-doctor-logout-button:hover .icon {
+  transform: scale(1.1);
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .sidebar-doctor {
+    width: 260px;
+  }
+  
+  .sidebar-doctor-header {
+    padding: 1.25rem 1.25rem 0.75rem;
+  }
+  
+  .sidebar-doctor-header h2 {
+    font-size: 1.35rem;
+  }
+  
+  .sidebar-doctor-menu a {
+    padding: 0.75rem 0.875rem;
+    font-size: 0.9rem;
+  }
+  
+  .sidebar-doctor-footer {
+    padding: 1.25rem;
+  }
+}
+
+/* Animation d'entrée */
+@keyframes sidebar-doctor-slide-in {
+  from {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+.sidebar-doctor {
+  animation: sidebar-doctor-slide-in 0.3s ease-out;
+}
+
+/* États de focus pour l'accessibilité */
+.sidebar-doctor-menu a:focus,
+.sidebar-doctor-logout-button:focus {
+  outline: 2px solid var(--sidebar-doctor-white);
+  outline-offset: 2px;
+}
+
+/* Effets de brillance subtils */
+.sidebar-doctor-menu a.active::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.1) 0%, transparent 50%);
+  pointer-events: none;
+}

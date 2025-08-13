@@ -1,0 +1,413 @@
+/* Variables de couleurs spécifiques à la page des demandes de service */
+:root {
+  --demande-service-primary: #3b82f6;
+  --demande-service-primary-dark: #1e40af;
+  --demande-service-primary-light: #60a5fa;
+  --demande-service-secondary: #10b981;
+  --demande-service-secondary-dark: #059669;
+  --demande-service-background: #ffffff;
+  --demande-service-background-gray: #f8fafc;
+  --demande-service-border: #e2e8f0;
+  --demande-service-text: #1e293b;
+  --demande-service-text-light: #64748b;
+  --demande-service-text-muted: #94a3b8;
+  --demande-service-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+  --demande-service-shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  --demande-service-error: #ef4444;
+  --demande-service-warning: #f59e0b;
+  --demande-service-success: #10b981;
+}
+
+/* Conteneur principal */
+.demande-service-patient-wrapper {
+  padding: 24px;
+  min-height: 100vh;
+  background-color: var(--demande-service-background-gray);
+}
+
+/* En-tête de la page */
+.demande-service-patient-header {
+  margin-bottom: 32px;
+}
+
+.demande-service-main-title {
+  font-size: 32px;
+  font-weight: 700;
+  color: var(--demande-service-text);
+  margin: 0;
+  letter-spacing: -0.025em;
+}
+
+/* Contenu principal */
+.demande-service-patient-content {
+  max-width: 1200px;
+}
+
+/* Navigation par onglets */
+.demande-service-tab-navigation {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 32px;
+  background-color: var(--demande-service-background);
+  padding: 8px;
+  border-radius: 12px;
+  box-shadow: var(--demande-service-shadow);
+  border: 1px solid var(--demande-service-border);
+}
+
+.demande-service-tab-button {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 20px;
+  border: none;
+  background-color: transparent;
+  color: var(--demande-service-text-light);
+  font-size: 14px;
+  font-weight: 500;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  flex: 1;
+  justify-content: center;
+}
+
+.demande-service-tab-button:hover {
+  background-color: var(--demande-service-background-gray);
+  color: var(--demande-service-text);
+}
+
+.demande-service-tab-button.demande-service-tab-active {
+  background-color: var(--demande-service-primary);
+  color: white;
+  box-shadow: var(--demande-service-shadow);
+}
+
+/* Section des demandes */
+.demande-service-section {
+  background-color: var(--demande-service-background);
+  border-radius: 16px;
+  padding: 24px;
+  box-shadow: var(--demande-service-shadow);
+  border: 1px solid var(--demande-service-border);
+  height: 500px;
+  overflow-y: auto;
+}
+
+.demande-service-section-header {
+  margin-bottom: 24px;
+  padding-bottom: 16px;
+  border-bottom: 1px solid var(--demande-service-border);
+}
+
+.demande-service-section-title {
+  font-size: 24px;
+  font-weight: 600;
+  color: var(--demande-service-text);
+  margin: 0;
+}
+
+/* Conteneur des cartes de demandes */
+.demande-service-demands-container {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+/* Carte de demande */
+.demande-service-demand-card {
+  background-color: var(--demande-service-background);
+  border: 1px solid var(--demande-service-border);
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: var(--demande-service-shadow);
+  transition: all 0.2s ease;
+  position: relative;
+}
+
+.demande-service-demand-card:hover {
+  box-shadow: var(--demande-service-shadow-lg);
+  transform: translateY(-1px);
+}
+
+/* En-tête de la carte */
+.demande-service-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 16px;
+}
+
+.demande-service-card-title-section {
+  flex: 1;
+}
+
+.demande-service-card-title {
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--demande-service-text);
+  margin: 0 0 4px 0;
+  line-height: 1.4;
+}
+
+.demande-service-card-subtitle {
+  font-size: 14px;
+  color: var(--demande-service-text-light);
+  margin: 0;
+  font-weight: 500;
+}
+
+/* Badge de statut */
+.demande-service-status-badge {
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-left: 16px;
+  white-space: nowrap;
+}
+
+.demande-service-status-en-attente {
+  background-color: #fef3c7;
+  color: #92400e;
+}
+
+.demande-service-status-confirme {
+  background-color: #d1fae5;
+  color: #065f46;
+}
+
+.demande-service-status-termine {
+  background-color: #dbeafe;
+  color: #1e40af;
+}
+
+.demande-service-status-annule,
+.demande-service-status-rejetee {
+  background-color: #fee2e2;
+  color: #991b1b;
+}
+
+/* Contenu de la carte */
+.demande-service-card-content {
+  margin-bottom: 20px;
+}
+
+.demande-service-card-info-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 12px;
+  font-size: 14px;
+}
+
+.demande-service-icon {
+  color: var(--demande-service-primary);
+  flex-shrink: 0;
+}
+
+.demande-service-info-label {
+  color: var(--demande-service-text-light);
+  font-weight: 500;
+  min-width: 100px;
+}
+
+.demande-service-info-value {
+  color: var(--demande-service-text);
+  font-weight: 500;
+  flex: 1;
+}
+
+.demande-service-card-notes {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  padding: 12px;
+  background-color: var(--demande-service-background-gray);
+  border-radius: 8px;
+  margin-top: 16px;
+  border-left: 3px solid var(--demande-service-primary);
+}
+
+.demande-service-notes-content {
+  color: var(--demande-service-text);
+  font-size: 14px;
+  line-height: 1.5;
+  flex: 1;
+}
+
+/* Actions de la carte */
+.demande-service-card-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 12px;
+  padding-top: 16px;
+  border-top: 1px solid var(--demande-service-border);
+}
+
+.demande-service-btn {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 10px 16px;
+  border: none;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  text-decoration: none;
+}
+
+.demande-service-btn-cancel {
+  background-color: var(--demande-service-error);
+  color: white;
+}
+
+.demande-service-btn-cancel:hover {
+  background-color: #dc2626;
+  transform: translateY(-1px);
+  box-shadow: var(--demande-service-shadow);
+}
+
+.demande-service-btn-details {
+  background-color: var(--demande-service-primary);
+  color: white;
+}
+
+.demande-service-btn-details:hover {
+  background-color: var(--demande-service-primary-dark);
+  transform: translateY(-1px);
+  box-shadow: var(--demande-service-shadow);
+}
+
+.demande-service-btn-completed {
+  background-color: var(--demande-service-success);
+  color: white;
+}
+
+.demande-service-btn-completed:hover {
+  background-color: var(--demande-service-secondary-dark);
+  transform: translateY(-1px);
+  box-shadow: var(--demande-service-shadow);
+}
+
+.demande-service-btn-disabled {
+  background-color: var(--demande-service-text-muted);
+  color: white;
+  cursor: not-allowed;
+  opacity: 0.7;
+}
+
+.demande-service-btn-disabled:hover {
+  transform: none;
+  box-shadow: none;
+}
+
+/* État vide */
+.demande-service-empty-state {
+  text-align: center;
+  padding: 64px 32px;
+  color: var(--demande-service-text-light);
+}
+
+.demande-service-empty-icon {
+  margin-bottom: 24px;
+  opacity: 0.5;
+}
+
+.demande-service-empty-title {
+  font-size: 20px;
+  font-weight: 600;
+  color: var(--demande-service-text);
+  margin: 0 0 8px 0;
+}
+
+.demande-service-empty-subtitle {
+  font-size: 16px;
+  color: var(--demande-service-text-light);
+  margin: 0;
+  line-height: 1.5;
+}
+
+/* États de chargement et d'erreur */
+.demande-service-loading,
+.demande-service-error {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 48px;
+  font-size: 16px;
+  border-radius: 12px;
+  margin: 24px;
+}
+
+.demande-service-loading {
+  background-color: var(--demande-service-background);
+  color: var(--demande-service-text-light);
+  border: 1px solid var(--demande-service-border);
+}
+
+.demande-service-error {
+  background-color: #fee2e2;
+  color: #991b1b;
+  border: 1px solid #fecaca;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .demande-service-patient-wrapper {
+    padding: 16px;
+  }
+  
+  .demande-service-main-title {
+    font-size: 24px;
+  }
+  
+  .demande-service-tab-navigation {
+    flex-direction: column;
+    gap: 4px;
+  }
+  
+  .demande-service-tab-button {
+    justify-content: flex-start;
+  }
+  
+  .demande-service-section {
+    padding: 16px;
+  }
+  
+  .demande-service-card-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+  }
+  
+  .demande-service-status-badge {
+    margin-left: 0;
+    align-self: flex-start;
+  }
+  
+  .demande-service-card-actions {
+    flex-direction: column;
+    gap: 8px;
+  }
+  
+  .demande-service-btn {
+    justify-content: center;
+    width: 100%;
+  }
+  
+  .demande-service-card-info-row {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 4px;
+  }
+  
+  .demande-service-info-label {
+    min-width: auto;
+    font-size: 12px;
+  }
+}

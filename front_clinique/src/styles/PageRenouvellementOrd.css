@@ -1,0 +1,608 @@
+/* Variables de couleur spécifiques à la page de renouvellement */
+:root {
+  --renouv-primary: #3b82f6;
+  --renouv-primary-hover: #2563eb;
+  --renouv-success: #10b981;
+  --renouv-success-hover: #059669;
+  --renouv-danger: #ef4444;
+  --renouv-danger-hover: #dc2626;
+  --renouv-warning: #f59e0b;
+  --renouv-warning-hover: #d97706;
+  --renouv-info: #06b6d4;
+  --renouv-info-hover: #0891b2;
+  --renouv-gray: #6b7280;
+  --renouv-gray-light: #e5e7eb;
+  --renouv-gray-lighter: #f9fafb;
+  --renouv-text-primary: #111827;
+  --renouv-text-secondary: #374151;
+  --renouv-border: #d1d5db;
+  --renouv-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  --renouv-shadow-md: 0 4px 6px rgba(0, 0, 0, 0.1);
+  --renouv-shadow-lg: 0 10px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Structure principale */
+.renouv-main-container {
+  padding: 2rem;
+  background-color: #f5f7fa;
+  min-height: 100vh;
+}
+
+.renouv-content-container {
+  max-width: 1400px;
+  margin: 0 auto;
+  background-color: white;
+  border-radius: 12px;
+  box-shadow: var(--renouv-shadow-md);
+  padding: 2rem;
+}
+
+.renouv-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.renouv-title {
+  font-size: 1.75rem;
+  color: var(--renouv-text-primary);
+  margin: 0;
+}
+
+.renouv-prescription-btn {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  background-color: var(--renouv-primary);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  padding: 0.75rem 1.25rem;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.renouv-prescription-btn:hover {
+  background-color: var(--renouv-primary-hover);
+}
+
+/* Statistiques */
+.renouv-stats-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.renouv-stat-card {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1.5rem;
+  border-radius: 10px;
+  background-color: white;
+  box-shadow: var(--renouv-shadow);
+}
+
+.renouv-stat-pending {
+  border-left: 4px solid var(--renouv-warning);
+}
+
+.renouv-stat-approved {
+  border-left: 4px solid var(--renouv-success);
+}
+
+.renouv-stat-rejected {
+  border-left: 4px solid var(--renouv-danger);
+}
+
+.renouv-stat-icon {
+  padding: 0.75rem;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.renouv-stat-pending .renouv-stat-icon {
+  background-color: rgba(245, 158, 11, 0.1);
+  color: var(--renouv-warning);
+}
+
+.renouv-stat-approved .renouv-stat-icon {
+  background-color: rgba(16, 185, 129, 0.1);
+  color: var(--renouv-success);
+}
+
+.renouv-stat-rejected .renouv-stat-icon {
+  background-color: rgba(239, 68, 68, 0.1);
+  color: var(--renouv-danger);
+}
+
+.renouv-stat-content h3 {
+  font-size: 1rem;
+  color: var(--renouv-text-secondary);
+  margin: 0 0 0.25rem 0;
+  font-weight: 500;
+}
+
+.renouv-stat-value {
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: var(--renouv-text-primary);
+  margin: 0;
+}
+
+/* Filtres */
+.renouv-filters-container {
+  display: flex;
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+  flex-wrap: wrap;
+}
+
+.renouv-search-container,
+.renouv-filter-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+  flex: 1;
+  min-width: 250px;
+}
+
+.renouv-search-icon,
+.renouv-filter-icon {
+  position: absolute;
+  left: 1rem;
+  color: var(--renouv-gray);
+  z-index: 1;
+}
+
+.renouv-search-input,
+.renouv-filter-select {
+  width: 100%;
+  padding: 0.75rem 1rem 0.75rem 2.5rem;
+  border: 1px solid var(--renouv-border);
+  border-radius: 8px;
+  font-size: 0.95rem;
+  background: white;
+  transition: border-color 0.2s;
+}
+
+.renouv-search-input:focus,
+.renouv-filter-select:focus {
+  outline: none;
+  border-color: var(--renouv-primary);
+}
+
+.renouv-filter-select {
+  cursor: pointer;
+  appearance: none;
+}
+
+/* Tableau */
+.renouv-table-container {
+  height: 380px;
+  max-height: 380px;
+  overflow-y: auto;
+  overflow-x: auto;
+  border-radius: 10px;
+  box-shadow: var(--renouv-shadow);
+  margin-bottom: 2rem;
+}
+
+.renouv-table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: white;
+}
+
+.renouv-table th {
+  padding: 1rem;
+  text-align: left;
+  background-color: var(--renouv-gray-lighter);
+  font-weight: 600;
+  color: var(--renouv-text-secondary);
+  border-bottom: 1px solid var(--renouv-border);
+}
+
+.renouv-table td {
+  padding: 1rem;
+  border-bottom: 1px solid var(--renouv-border);
+  vertical-align: middle;
+}
+
+.renouv-table-row:hover {
+  background-color: rgba(59, 130, 246, 0.05);
+}
+
+.renouv-no-data {
+  text-align: center;
+  padding: 2rem;
+  color: var(--renouv-gray);
+}
+
+.renouv-patient-info {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.renouv-patient-info strong {
+  color: var(--renouv-text-primary);
+}
+
+.renouv-patient-info span {
+  font-size: 0.85rem;
+  color: var(--renouv-gray);
+}
+
+/* Badges de statut */
+.renouv-status-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  font-weight: 500;
+}
+
+.renouv-status-pending {
+  background-color: rgba(245, 158, 11, 0.1);
+  color: var(--renouv-warning);
+}
+
+.renouv-status-approved {
+  background-color: rgba(16, 185, 129, 0.1);
+  color: var(--renouv-success);
+}
+
+.renouv-status-rejected {
+  background-color: rgba(239, 68, 68, 0.1);
+  color: var(--renouv-danger);
+}
+
+/* Boutons d'action */
+.renouv-actions-cell {
+  display: flex;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+}
+
+.renouv-view-btn,
+.renouv-approve-btn,
+.renouv-reject-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 6px;
+  font-size: 0.85rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.renouv-view-btn {
+  background-color: rgba(59, 130, 246, 0.1);
+  color: var(--renouv-primary);
+}
+
+.renouv-view-btn:hover {
+  background-color: rgba(59, 130, 246, 0.2);
+}
+
+.renouv-approve-btn {
+  background-color: rgba(16, 185, 129, 0.1);
+  color: var(--renouv-success);
+}
+
+.renouv-approve-btn:hover {
+  background-color: rgba(16, 185, 129, 0.2);
+}
+
+.renouv-reject-btn {
+  background-color: rgba(239, 68, 68, 0.1);
+  color: var(--renouv-danger);
+}
+
+.renouv-reject-btn:hover {
+  background-color: rgba(239, 68, 68, 0.2);
+}
+
+/* Modals */
+.renouv-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  padding: 1rem;
+}
+
+.renouv-modal-content {
+  background-color: white;
+  border-radius: 12px;
+  max-width: 800px;
+  width: 100%;
+  max-height: 90vh;
+  overflow-y: auto;
+  box-shadow: var(--renouv-shadow-lg);
+}
+
+.renouv-details-modal {
+  max-width: 900px;
+}
+
+.renouv-reject-modal {
+  max-width: 500px;
+}
+
+.renouv-modal-header {
+  padding: 1.5rem;
+  border-bottom: 1px solid var(--renouv-border);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.renouv-modal-header h2 {
+  margin: 0;
+  color: var(--renouv-text-primary);
+  font-size: 1.5rem;
+}
+
+.renouv-modal-body {
+  padding: 1.5rem;
+}
+
+/* Détails de la demande */
+.renouv-details-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.renouv-detail-section {
+  background-color: var(--renouv-gray-lighter);
+  padding: 1.25rem;
+  border-radius: 8px;
+}
+
+.renouv-full-width {
+  grid-column: 1 / -1;
+}
+
+.renouv-detail-title {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin: 0 0 1rem 0;
+  color: var(--renouv-primary);
+  font-size: 1.1rem;
+}
+
+.renouv-detail-icon {
+  color: var(--renouv-primary);
+}
+
+.renouv-detail-content p {
+  margin: 0.75rem 0;
+  color: var(--renouv-text-primary);
+}
+
+.renouv-detail-content strong {
+  font-weight: 600;
+}
+
+/* Section médicaments */
+.renouv-medications-section {
+  margin-top: 1.5rem;
+}
+
+.renouv-medications-title {
+  margin-bottom: 1rem;
+  color: var(--renouv-text-secondary);
+  font-size: 1.1rem;
+}
+
+.renouv-medications-table {
+  overflow-x: auto;
+}
+
+.renouv-medications-inner-table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: var(--renouv-gray-lighter);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.renouv-medications-inner-table th {
+  padding: 0.75rem;
+  text-align: left;
+  background-color: var(--renouv-gray-light);
+  font-weight: 600;
+  border-bottom: 1px solid var(--renouv-border);
+}
+
+.renouv-medications-inner-table td {
+  padding: 0.75rem;
+  border-bottom: 1px solid var(--renouv-border);
+}
+
+.renouv-medication-name {
+  font-weight: 500;
+  color: var(--renouv-text-primary);
+}
+
+.renouv-no-medications {
+  margin-top: 1.5rem;
+  padding: 1rem;
+  background-color: rgba(245, 158, 11, 0.1);
+  border-radius: 8px;
+  border: 1px solid var(--renouv-warning);
+}
+
+.renouv-no-medications p {
+  margin: 0;
+  color: #92400e;
+}
+
+/* Raison de rejet */
+.renouv-rejection-reason {
+  background-color: rgba(239, 68, 68, 0.05);
+  border-left: 3px solid var(--renouv-danger);
+}
+
+/* Actions du modal */
+.renouv-modal-actions {
+  padding: 1.5rem;
+  border-top: 1px solid var(--renouv-border);
+  display: flex;
+  gap: 1rem;
+  justify-content: flex-end;
+}
+
+.renouv-close-btn,
+.renouv-cancel-btn {
+  padding: 0.75rem 1.5rem;
+  border: 1px solid var(--renouv-border);
+  background-color: white;
+  color: var(--renouv-text-primary);
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 0.95rem;
+  transition: background-color 0.2s;
+}
+
+.renouv-close-btn:hover,
+.renouv-cancel-btn:hover {
+  background-color: var(--renouv-gray-lighter);
+}
+
+.renouv-confirm-reject-btn {
+  padding: 0.75rem 1.5rem;
+  background-color: var(--renouv-danger);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 0.95rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  transition: background-color 0.2s;
+}
+
+.renouv-confirm-reject-btn:hover {
+  background-color: var(--renouv-danger-hover);
+}
+
+.renouv-confirm-reject-btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+/* Champ de texte pour le rejet */
+.renouv-field-group {
+  margin-bottom: 1.5rem;
+}
+
+.renouv-field-group label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+  color: var(--renouv-text-primary);
+}
+
+.renouv-reject-textarea {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid var(--renouv-border);
+  border-radius: 8px;
+  font-size: 0.95rem;
+  resize: vertical;
+  min-height: 100px;
+}
+
+.renouv-reject-textarea:focus {
+  outline: none;
+  border-color: var(--renouv-primary);
+}
+
+.renouv-reject-message {
+  margin-bottom: 1.5rem;
+  color: var(--renouv-text-primary);
+}
+
+/* Loading */
+.renouv-loading {
+  text-align: center;
+  padding: 3rem;
+  color: var(--renouv-gray);
+  font-size: 1.1rem;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .renouv-main-container {
+    padding: 1rem;
+  }
+
+  .renouv-content-container {
+    padding: 1.5rem;
+  }
+
+  .renouv-stats-container {
+    grid-template-columns: 1fr;
+  }
+
+  .renouv-details-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .renouv-modal-actions {
+    flex-direction: column;
+  }
+
+  .renouv-actions-cell {
+    flex-direction: column;
+    align-items: stretch;
+  }
+}
+
+@media (max-width: 480px) {
+  .renouv-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .renouv-title {
+    font-size: 1.5rem;
+  }
+
+  .renouv-modal-content {
+    margin: 0.5rem;
+    max-height: 95vh;
+  }
+
+  .renouv-modal-header,
+  .renouv-modal-body,
+  .renouv-modal-actions {
+    padding: 1rem;
+  }
+}
