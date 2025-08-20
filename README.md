@@ -47,12 +47,13 @@ II-Technologies utilisées
     Firebase Cloud Messaging
 
 III-Structure du projet
-    GISS/
-    │── frontend/         # Code React + Vite
-    │── backend/          # Code Laravel
-    │── database/         # Scripts de base de données MySQL
-    │── docs/             # Documentation & diagrammes
-    │── README.md         # Documentation principale
+
+        GISS/
+        │── frontend/         # Code React + Vite
+        │── backend/          # Code Laravel
+        │── database/         # Scripts de base de données MySQL
+        │── docs/             # Documentation & diagrammes
+        │── README.md         # Documentation principale
 
 IV-Installation & Utilisation
     1-Cloner le projet
