@@ -1,7 +1,7 @@
 import { useState, useEffect, useRef } from "react";
 import { Search, Send, Phone, Video, Plus, MessageSquare as MessageSquareIcon, Clock } from "lucide-react";
 import axios from "axios";
-import "./styles/MessagePharmacie.css"; // Assuming shared styles for messages
+import "./styles/MessageInf.css"; // Assuming shared styles for messages
 
 // Utility function to get initials for avatars
 const getInitials = (name) => {
@@ -205,7 +205,7 @@ const MessagePharmacie = () => {
 
   return (
         <div className="main-content">
-        <div className="messages-container">
+        <div className="messages-Inf-container">
           <div className="messages-sidebar">
             <div className="sidebar-header-message">
               <h2>Messages</h2>
