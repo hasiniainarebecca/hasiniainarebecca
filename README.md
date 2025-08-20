@@ -5,6 +5,7 @@ GISS (Gestion Intégrée des Soins de Santé) est une application web moderne qu
 Elle met en relation patients, médecins, infirmiers/anesthésistes et pharmaciens dans un écosystème unique, simplifiant la gestion des soins et favorisant un meilleur suivi médical.
 
 I-Fonctionnalités principales
+
     1-Patients
     Consultations médicales en ligne
     Gestion des rendez-vous
@@ -31,6 +32,7 @@ I-Fonctionnalités principales
     Messagerie avec patients et professionnels
 
 II-Technologies utilisées
+
     1-Frontend
     ⚛ React + Vite
     CSS pour le design
@@ -56,6 +58,7 @@ III-Structure du projet
         │── README.md         # Documentation principale
 
 IV-Installation & Utilisation
+
     1-Cloner le projet
     git clone https://github.com/hasiniainarebecca/hasiniainarebecca.git
     cd GISS
@@ -78,8 +81,10 @@ IV-Installation & Utilisation
     Backend API : http://localhost:8000
 
 V-Auteurs
+
     Projet développé dans le cadre d’un mémoire de licence par :
     ANDRIANTSOA Hasiniaina Rebecca
 
 VI-Licence
+
     Ce projet est sous licence MIT. Vous pouvez l’utiliser, le modifier et le distribuer librement.
