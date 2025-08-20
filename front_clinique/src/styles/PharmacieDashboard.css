@@ -22,8 +22,9 @@
 
 /* Conteneur principal */
 .pharmacist-dashboard-wrapper {
-  height: 100%;
-  overflow-y: auto;
+  /* height: 100%;
+  overflow-y: auto; */
+  margin-left: 290px !important;
   max-height: 100%;
   min-height: 100vh;
   background-color: var(--pharmacist-surface);

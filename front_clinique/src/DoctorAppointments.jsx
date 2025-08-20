@@ -408,8 +408,8 @@ const DoctorAppointments = () => {
   };
 
   return (
-    <div className="dashboard-doctor-main-content">
-      <div className="appointments-container">
+    <div className="appointement-doctor-main-content">
+      <div className="appointments-doctor-container">
         <div className="appointments-header">
           <h1>Mes Rendez-vous</h1>
           <div className="header-actions">

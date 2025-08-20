@@ -59,6 +59,8 @@ import NotificationsPatientsPage from './NotificationsPatientsPage';
 import NotificationsDocteurPage from './NotificationsDocteurPage';
 import NotificationsInfirmierPage from './NotificationsInfirmierPage';
 import NotificationsPharmaPage from './NotificationsPharmaPage';
+import AdminDashboard from './AdminDashboard';
+import SidebarAdmin from './components/sidebaradmin';
 
 
 const App = () => {
@@ -95,6 +97,8 @@ const MainApp = () => {
     location.pathname.startsWith('/edit-patient-profile') ||
     location.pathname.startsWith('/patient-notification') ||
     location.pathname.startsWith('/profil')) return <Sidebarpatient />;
+
+    if (location.pathname.startsWith('/dashboard/Admin')) return <SidebarAdmin />;
 
     if (location.pathname.startsWith('/dashboard/docteur') ||
     location.pathname.startsWith('/docteur/rendez-vous') ||
@@ -137,6 +141,7 @@ const MainApp = () => {
           <Route path="/" element={<Acceuil />} />
           <Route path="/connexion" element={<Login />} />
           <Route path="/inscription" element={<SignupForm />} />
+          <Route path="/dashboard/Admin" element={<AdminDashboard />} />
           <Route path="/dashboard/patient" element={<RequireAuth><PatientDashboard /></RequireAuth>} />
           <Route path="/appointments" element={<RequireAuth><AppointmentForm/></RequireAuth>}/>
           <Route path="/patient/rendez-vous" element={<RequireAuth><AppointmentList /></RequireAuth>} />

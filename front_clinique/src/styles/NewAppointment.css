@@ -3,8 +3,9 @@
   border-radius: 0.5rem;
   box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
   width: 90%; /* élargie à 90% de la largeur du navigateur */
-  max-width: 1200px; /* augmente la largeur maximale pour écrans larges */
-  height: 730px;
+   max-width: 1200px; /* augmente la largeur maximale pour écrans larges */
+   height: 730px; 
+  margin-left: 350px !important;
   overflow-y: auto;
   margin: 0 auto; /* centrer horizontalement */
   padding: 2rem; /* ajoute un peu d'espace intérieur */

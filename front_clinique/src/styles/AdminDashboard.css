@@ -1,0 +1,388 @@
+/* Variables de couleurs spécifiques à AdminDashboard */
+:root {
+  --admin-primary-green: #4ECDC4;
+  --admin-primary-green-hover: #45B7B8;
+  --admin-sidebar-bg: #2C3E50;
+  --admin-sidebar-text: #BDC3C7;
+  --admin-sidebar-active: #4ECDC4;
+  --admin-main-bg: #F8F9FA;
+  --admin-white: #FFFFFF;
+  --admin-text-dark: #2C3E50;
+  --admin-text-light: #6C757D;
+  --admin-border: #E9ECEF;
+  --admin-shadow: rgba(0, 0, 0, 0.1);
+  --admin-card-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+  --admin-patients-color: #3498DB;
+  --admin-doctors-color: #E74C3C;
+  --admin-professionals-color: #2ECC71;
+}
+
+/* Reset et base */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.admin-dashboard-container {
+  margin-left: 250px;
+  padding: 20px;
+  display: flex;
+  min-height: 100vh;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  background-color: var(--admin-main-bg);
+}
+
+/* Sidebar */
+/* .admin-sidebar {
+  width: 250px;
+  background-color: var(--admin-sidebar-bg);
+  color: var(--admin-sidebar-text);
+  padding: 0;
+  position: fixed;
+  height: 100vh;
+  left: 0;
+  top: 0;
+  z-index: 1000;
+} */
+
+.admin-logo {
+  padding: 20px 24px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.admin-logo-text {
+  color: var(--admin-primary-green);
+  font-size: 24px;
+  font-weight: 600;
+  margin: 0;
+}
+
+.admin-nav {
+  padding: 20px 0;
+}
+
+.admin-nav-item {
+  display: flex;
+  align-items: center;
+  padding: 12px 24px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  color: var(--admin-sidebar-text);
+  text-decoration: none;
+}
+
+.admin-nav-item:hover {
+  background-color: rgba(255, 255, 255, 0.05);
+  color: var(--admin-white);
+}
+
+.admin-nav-item-active {
+  background-color: var(--admin-primary-green);
+  color: var(--admin-white);
+}
+
+.admin-nav-item-active:hover {
+  background-color: var(--admin-primary-green-hover);
+}
+
+.admin-nav-icon {
+  margin-right: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.admin-nav-text {
+  font-size: 14px;
+  font-weight: 500;
+}
+
+/* Main Content */
+.admin-main-content {
+  flex: 1;
+  padding: 0;
+}
+
+/* Header */
+.admin-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 24px 32px;
+  background-color: var(--admin-white);
+  border-bottom: 1px solid var(--admin-border);
+}
+
+.admin-header-left {
+  flex: 1;
+}
+
+.admin-page-title {
+  font-size: 28px;
+  font-weight: 600;
+  color: var(--admin-text-dark);
+  margin: 0;
+}
+
+.admin-header-right {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.admin-notification-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 8px;
+  background-color: var(--admin-main-bg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.admin-notification-icon:hover {
+  background-color: var(--admin-border);
+}
+
+.admin-user-profile {
+  display: flex;
+  align-items: center;
+}
+
+.admin-user-avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: var(--admin-text-dark);
+  color: var(--admin-white);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 600;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+/* Stats Grid */
+.admin-stats-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  gap: 24px;
+  padding: 32px;
+  padding-bottom: 0;
+}
+
+.admin-stat-card {
+  background-color: var(--admin-white);
+  border-radius: 12px;
+  padding: 24px;
+  box-shadow: var(--admin-card-shadow);
+  border: 1px solid var(--admin-border);
+}
+
+.admin-stat-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.admin-stat-info {
+  flex: 1;
+}
+
+.admin-stat-title {
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--admin-text-light);
+  margin-bottom: 8px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.admin-stat-number {
+  font-size: 36px;
+  font-weight: 700;
+  color: var(--admin-text-dark);
+  margin-bottom: 8px;
+  line-height: 1;
+}
+
+.admin-stat-description {
+  font-size: 14px;
+  color: var(--admin-text-light);
+  margin: 0;
+}
+
+.admin-stat-icon {
+  width: 48px;
+  height: 48px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 16px;
+}
+
+.admin-stat-icon-patients {
+  background-color: rgba(52, 152, 219, 0.1);
+  color: var(--admin-patients-color);
+}
+
+.admin-stat-icon-doctors {
+  background-color: rgba(231, 76, 60, 0.1);
+  color: var(--admin-doctors-color);
+}
+
+.admin-stat-icon-professionals {
+  background-color: rgba(46, 204, 113, 0.1);
+  color: var(--admin-professionals-color);
+}
+
+/* Control Panel */
+.admin-control-panel {
+  padding: 32px;
+}
+
+.admin-panel-header {
+  margin-bottom: 24px;
+}
+
+.admin-panel-title {
+  font-size: 24px;
+  font-weight: 600;
+  color: var(--admin-text-dark);
+  margin-bottom: 8px;
+}
+
+.admin-panel-description {
+  font-size: 16px;
+  color: var(--admin-text-light);
+  margin: 0;
+}
+
+.admin-control-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.admin-control-card {
+  background-color: var(--admin-white);
+  border-radius: 12px;
+  padding: 24px;
+  box-shadow: var(--admin-card-shadow);
+  border: 1px solid var(--admin-border);
+  cursor: pointer;
+  transition: all 0.2s ease;
+  text-align: left;
+}
+
+.admin-control-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.12);
+  border-color: var(--admin-primary-green);
+}
+
+.admin-control-icon {
+  width: 48px;
+  height: 48px;
+  border-radius: 12px;
+  background-color: rgba(78, 205, 196, 0.1);
+  color: var(--admin-primary-green);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 16px;
+}
+
+.admin-control-title {
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--admin-text-dark);
+  margin: 0;
+  line-height: 1.4;
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+  .admin-stats-grid {
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+    padding: 24px;
+    padding-bottom: 0;
+  }
+  
+  .admin-control-grid {
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 16px;
+  }
+  
+  .admin-control-panel {
+    padding: 24px;
+  }
+}
+
+@media (max-width: 768px) {
+  .admin-sidebar {
+    width: 60px;
+  }
+  
+  .admin-main-content {
+    margin-left: 60px;
+  }
+  
+  .admin-nav-text {
+    display: none;
+  }
+  
+  .admin-logo-text {
+    display: none;
+  }
+  
+  .admin-stats-grid {
+    grid-template-columns: 1fr;
+    padding: 16px;
+    padding-bottom: 0;
+  }
+  
+  .admin-control-grid {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+  
+  .admin-control-panel {
+    padding: 16px;
+  }
+  
+  .admin-header {
+    padding: 16px 20px;
+  }
+  
+  .admin-page-title {
+    font-size: 24px;
+  }
+}
+
+@media (max-width: 480px) {
+  .admin-sidebar {
+    transform: translateX(-100%);
+    transition: transform 0.3s ease;
+  }
+  
+  .admin-main-content {
+    margin-left: 0;
+  }
+  
+  .admin-stat-content {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  .admin-stat-icon {
+    margin-left: 0;
+    margin-top: 16px;
+  }
+}

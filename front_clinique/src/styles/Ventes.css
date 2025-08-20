@@ -1,10 +1,11 @@
 .sales-container {
   padding: 0.5rem;
   max-width: 100%;
-  overflow-y: auto;
-  height: 700px;
+  /* overflow-y: auto;
+  height: 700px; */
 }
-.dashboard-doctor-main-content{
+.vente-med-main-content{
+  margin-left: 250px;
   padding: 3%;
 }
 

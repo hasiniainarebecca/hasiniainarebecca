@@ -19,8 +19,9 @@
 
 /* Container principal */
 .edit-patient-profile-wrapper {
-  width: 85%;
-  position: fixed;
+  /* width: 85%;
+  position: fixed; */
+  margin-left: 270px;
   min-height: 100vh;
   background-color: var(--edit-profile-bg-color);
   padding: 24px;
@@ -66,8 +67,8 @@
 
 /* Sections du formulaire */
 .edit-patient-profile-section {
-  height: 600px;
-  overflow-y: auto;
+  /* height: 600px;
+  overflow-y: auto; */
   border-bottom: 1px solid var(--edit-profile-border-color);
 }
 

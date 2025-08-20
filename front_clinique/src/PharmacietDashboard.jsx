@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react"
 import axios from "axios";
 import { useNavigate } from "react-router-dom"
-import { BarChart, Calendar, Package, FileText, AlertTriangle, DollarSign, Users, MessageSquare } from "lucide-react"
+import { BarChart, Calendar, Package, FileText, AlertTriangle, DollarSign, Users, MessageSquare,CreditCard } from "lucide-react"
 import './styles/PharmacieDashboard.css'
 
 const PharmacierDashboard = () => {
@@ -206,7 +206,7 @@ const PharmacierDashboard = () => {
           <div className="pharmacist-stats-row">
             <div className="pharmacist-stat-card pharmacist-stat-revenue">
               <div className="pharmacist-stat-icon">
-                <DollarSign size={20} />
+                <CreditCard size={20} />
               </div>
               <div className="pharmacist-stat-content">
                 <div className="pharmacist-stat-number">{stats.dailySales.toFixed(2)} Ar</div>
@@ -217,7 +217,7 @@ const PharmacierDashboard = () => {
 
             <div className="pharmacist-stat-card pharmacist-stat-monthly">
               <div className="pharmacist-stat-icon">
-                <DollarSign size={20} />
+                <CreditCard size={20} />
               </div>
               <div className="pharmacist-stat-content">
                 <div className="pharmacist-stat-number">{stats.monthlyRevenue.toFixed(2)} Ar</div>

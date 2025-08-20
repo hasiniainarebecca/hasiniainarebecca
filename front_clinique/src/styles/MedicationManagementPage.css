@@ -50,6 +50,7 @@
 /* Layout principal */
 .med-mgmt-dashboard-main-content {
   padding: 10px;
+  margin-left: 270px;
   /* font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif; */
 }
 
@@ -266,12 +267,12 @@
 
 /* Table */
 .med-mgmt-table-container {
-  height: 350px;
+  /* height: 350px; */
   background: var(--med-mgmt-white);
   border-radius: var(--med-mgmt-radius-xl);
   box-shadow: var(--med-mgmt-shadow);
   border: 1px solid var(--med-mgmt-gray-100);
-  overflow-y: auto;
+  /* overflow-y: auto; */
 }
 
 .med-mgmt-table-wrapper {

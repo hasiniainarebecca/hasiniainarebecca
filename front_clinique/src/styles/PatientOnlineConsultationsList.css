@@ -46,7 +46,7 @@
 .consultation-online-wrapper {
   background-color: var(--consultation-background);
   min-height: 100vh;
- 
+  margin-left: 250px;
 }
 .dashboard-doctor-main-content{
   padding: 3%;

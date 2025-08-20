@@ -24,9 +24,10 @@
 
 /* Wrapper principal */
 .patient-profile-wrapper {
-  width: 85%;
+  margin-left: 260px;
+  /* width: 85%; */
   min-width: 40%;
-  position: fixed;
+  /* position: fixed; */
   background-color: var(--patient-profile-background);
   min-height: 100vh;
   padding: 1.5rem;
@@ -34,8 +35,8 @@
 
 /* Container principal */
 .patient-profile-container {
-  height: 700px;
-  overflow-y: auto;
+  /* height: 700px;
+  overflow-y: auto; */
   max-width: 1200px;
   margin: 0 auto;
   display: flex;

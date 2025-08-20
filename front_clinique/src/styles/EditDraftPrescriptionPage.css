@@ -1,5 +1,6 @@
 /* Styles pour la page de modification des brouillons d'ordonnances */
 .edit-draft-page {
+  margin-left: 20px;
     flex: 1;
     padding: 30px;
     background-color: var(--main-bg);

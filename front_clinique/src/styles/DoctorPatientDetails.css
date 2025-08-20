@@ -25,6 +25,7 @@
 
 /* Wrapper principal */
 .patient-details-wrapper {
+  margin-left: 350px !important;
   max-width: 1200px;
   margin: 0 auto;
   padding: 24px;
@@ -72,12 +73,12 @@
 
 /* Card principale */
 .patient-details-main-card {
-  height: 600px;
+  /* height: 600px; */
   background-color: var(--patient-details-bg-white);
   border-radius: var(--patient-details-radius);
   box-shadow: var(--patient-details-shadow);
   border: 1px solid var(--patient-details-border-light);
-  overflow: auto;
+  /* overflow: auto; */
 }
 
 /* Header du patient */

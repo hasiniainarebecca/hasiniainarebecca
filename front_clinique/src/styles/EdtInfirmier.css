@@ -19,8 +19,9 @@
 }
 /* Layout principal */
 .planning-infirmier-page {
-  height: 40px;
-  overflow-y: auto;
+  /* height: 40px;
+  overflow-y: auto; */
+  margin-left: 270px;
   min-height: 100vh;
   background: linear-gradient(135deg, #f0fdf4 0%, #f8fafc 100%);
   font-family: "Inter", -apple-system, BlinkMacSystemFont, sans-serif;

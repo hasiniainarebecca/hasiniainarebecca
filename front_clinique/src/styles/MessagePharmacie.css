@@ -76,8 +76,9 @@ body {
   display: flex;
   height: 100vh;
   max-height: 100vh;
+  margin-left: 270px !important;
   overflow: hidden;
-  width: 100%;
+  /* width: 100%; */
   background: var(--msg-bg-white);
   box-shadow: var(--msg-shadow-xl);
 }

@@ -22,6 +22,15 @@
 
 /* Ajoutez ces styles à la fin de votre fichier CSS */
 
+.sidebar-doctor{
+  padding: 0;
+  position: fixed !important;
+  height: 100vh !important;
+  left: 0;
+  top: 0;
+  z-index: 1000;
+}
+
 .notification-menu-item {
     position: relative !important;
     display: flex !important;

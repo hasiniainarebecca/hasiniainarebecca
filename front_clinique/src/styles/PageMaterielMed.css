@@ -29,6 +29,7 @@
 
 /* Container principal */
 .medical-equipment-container {
+  margin-left: 300px !important;
   padding: 5px;
   max-width: 1280px;
   margin: 0 auto;

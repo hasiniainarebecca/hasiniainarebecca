@@ -1,5 +1,5 @@
 import { useState, useEffect, useCallback, useRef } from "react";
-import { Calendar, Download, DollarSign, TrendingUp, ShoppingCart } from "lucide-react";
+import { Calendar, Download, CreditCard, TrendingUp, ShoppingCart } from "lucide-react";
 import { Bar } from "react-chartjs-2"; // CHANGEMENT: Importez Bar au lieu de Line
 import {
   Chart as ChartJS,
@@ -215,7 +215,7 @@ const Ventes = () => {
   };
 
   return (
-    <div className="dashboard-doctor-main-content">
+    <div className="vente-med-main-content">
           <div className="sales-container">
             <div className="sales-header">
               <h1>Suivi des ventes</h1>
@@ -224,7 +224,7 @@ const Ventes = () => {
             <div className="sales-summary">
               <div className="summary-card">
                 <div className="summary-icon">
-                  <DollarSign size={24} />
+                  <CreditCard size={24} />
                 </div>
                 <div className="summary-content">
                   <h3>Ventes totales</h3>

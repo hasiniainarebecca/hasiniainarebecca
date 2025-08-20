@@ -24,8 +24,9 @@
 
 /* Page principale */
 .patients-infirmier-page {
-  height: 700px;
-  overflow-y: auto;
+  /* height: 700px;
+  overflow-y: auto; */
+  margin-left: 300px;
   background-color: var(--patients-infirmier-background);
   padding: 24px;
 }

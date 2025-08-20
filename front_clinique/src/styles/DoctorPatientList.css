@@ -42,6 +42,7 @@
 
 /* Conteneur principal */
 .mdpl-wrapper {
+  margin-left: 300px !important;
   padding: 1.5rem;
   max-width: 1400px;
   margin: 0 auto;

@@ -1,7 +1,8 @@
 /* Styles pour la page Pharmacies des patients */
 .pharmacies-container {
-  height: 735px;
-  overflow-y: auto;
+  /* height: 735px;
+  overflow-y: auto; */
+  margin-left: 350px !important;
   padding: 0.5rem;
   max-width: 1200px;
   margin: 0 auto;

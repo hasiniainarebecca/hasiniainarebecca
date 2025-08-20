@@ -19,8 +19,9 @@
 }
 /* Layout principal */
 .planning-page {
-  height: 40px;
-  overflow-y: auto;
+  /* height: 40px;
+  overflow-y: auto; */
+  margin-left: 300px;
   min-height: 100vh;
   background-color: var(--gray-50);
   font-family: "Inter", -apple-system, BlinkMacSystemFont, sans-serif;

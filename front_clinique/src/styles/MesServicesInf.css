@@ -28,8 +28,9 @@
 .mes-services-container {
   padding: 32px;
   background-color: var(--mes-services-gray-100);
-  height: 739px;
-  overflow-y: auto;
+  margin-left: 250px;
+  /* height: 739px;
+  overflow-y: auto; */
 }
 
 /* Header avec statistiques */

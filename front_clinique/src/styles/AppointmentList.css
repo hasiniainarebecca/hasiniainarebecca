@@ -1,4 +1,5 @@
 .appointments-container {
+  margin-left: 350px !important;
   padding: 1.5rem;
   max-width: 1200px;
   margin: 0 auto;

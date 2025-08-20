@@ -13,6 +13,8 @@
 }
 
 .pd-dashboard-container {
+  margin-left: 250px;
+  padding: 10px;
   display: flex;
   min-height: 100vh;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;

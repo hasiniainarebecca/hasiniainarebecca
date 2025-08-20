@@ -23,6 +23,7 @@
 
 /* Structure principale */
 .renouv-main-container {
+  margin-left: 250px;
   padding: 2rem;
   background-color: #f5f7fa;
   min-height: 100vh;

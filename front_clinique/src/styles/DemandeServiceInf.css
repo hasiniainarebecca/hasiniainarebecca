@@ -27,6 +27,7 @@
 
 /* Container principal */
 .demande-service-modern-container {
+  margin-left: 300px;
   background-color: var(--demande-service-gray-50);
   min-height: 100vh;
   padding: 24px;
@@ -142,10 +143,10 @@
 
 /* Demands List */
 .demande-service-modern-list {
-  height: 400px;
+  /* height: 400px;
   max-height: 400px;
   overflow-y: auto;
-  padding: 0;
+  padding: 0; */
 }
 
 .demande-service-modern-card {

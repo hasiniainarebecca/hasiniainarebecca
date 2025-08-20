@@ -14,8 +14,9 @@
 }
 
 .patient-prescriptions-container {
-  height: 739px;
-  overflow-y: auto;
+  /* height: 739px;
+  overflow-y: auto; */
+  margin-left: 350px !important;
   width: 100%;
   max-width: 1200px;
   margin: 0 auto;
