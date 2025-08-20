@@ -56,7 +56,7 @@ III-Structure du projet
 
 IV-Installation & Utilisation
     1-Cloner le projet
-    git clone https://github.com/ton-profil/GISS.git
+    git clone https://github.com/hasiniainarebecca/hasiniainarebecca.git
     cd GISS
 
     2-Installation du backend (Laravel)
