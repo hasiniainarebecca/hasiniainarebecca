@@ -61,6 +61,11 @@ import NotificationsInfirmierPage from './NotificationsInfirmierPage';
 import NotificationsPharmaPage from './NotificationsPharmaPage';
 import AdminDashboard from './AdminDashboard';
 import SidebarAdmin from './components/sidebaradmin';
+import GestUtilisateur from './GestUtilisateur';
+import GestEtablissement from './GestEtablissement';
+import GestPharmacie from './GestPharmacie';
+import AdminRapport from './AdminRapport';
+import AdminParametre from './AdminParametre';
 
 
 const App = () => {
@@ -98,7 +103,14 @@ const MainApp = () => {
     location.pathname.startsWith('/patient-notification') ||
     location.pathname.startsWith('/profil')) return <Sidebarpatient />;
 
-    if (location.pathname.startsWith('/dashboard/Admin')) return <SidebarAdmin />;
+    if (location.pathname.startsWith('/dashboard/Admin') ||
+     location.pathname.startsWith('/Admin/gestion/utilisateur') || 
+     location.pathname.startsWith('/Admin/pharmacie') || 
+     location.pathname.startsWith('/Admin/rapport') || 
+     location.pathname.startsWith('/Admin/parametre') || 
+     location.pathname.startsWith('/Admin-notification') || 
+     location.pathname.startsWith('/Admin/etablissement'))
+      return <SidebarAdmin />;
 
     if (location.pathname.startsWith('/dashboard/docteur') ||
     location.pathname.startsWith('/docteur/rendez-vous') ||
@@ -142,6 +154,11 @@ const MainApp = () => {
           <Route path="/connexion" element={<Login />} />
           <Route path="/inscription" element={<SignupForm />} />
           <Route path="/dashboard/Admin" element={<AdminDashboard />} />
+          <Route path="/Admin/gestion/utilisateur" element={<GestUtilisateur />} />
+          <Route path="/Admin/etablissement" element={<GestEtablissement />} />
+          <Route path="/Admin/pharmacie" element={<GestPharmacie />} />
+          <Route path="/Admin/rapport" element={<AdminRapport />} />
+          <Route path="/Admin/parametre" element={<AdminParametre />} />
           <Route path="/dashboard/patient" element={<RequireAuth><PatientDashboard /></RequireAuth>} />
           <Route path="/appointments" element={<RequireAuth><AppointmentForm/></RequireAuth>}/>
           <Route path="/patient/rendez-vous" element={<RequireAuth><AppointmentList /></RequireAuth>} />

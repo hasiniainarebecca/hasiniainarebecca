@@ -1,0 +1,409 @@
+/* Variables de couleurs spécifiques à GestPharmacie */
+:root {
+  --gest-pharmacie-primary-teal: #4ECDC4;
+  --gest-pharmacie-dark-teal: #45B7B8;
+  --gest-pharmacie-light-gray: #F5F6FA;
+  --gest-pharmacie-medium-gray: #E5E7EB;
+  --gest-pharmacie-dark-gray: #6B7280;
+  --gest-pharmacie-text-primary: #1F2937;
+  --gest-pharmacie-text-secondary: #6B7280;
+  --gest-pharmacie-white: #FFFFFF;
+  --gest-pharmacie-active-green: #10B981;
+  --gest-pharmacie-inactive-red: #EF4444;
+  --gest-pharmacie-inactive-red-bg: #FEE2E2;
+  --gest-pharmacie-active-green-bg: #D1FAE5;
+  --gest-pharmacie-sidebar-bg: #374151;
+  --gest-pharmacie-notification-red: #DC2626;
+  --gest-pharmacie-border: #E5E7EB;
+  --gest-pharmacie-hover-gray: #F9FAFB;
+}
+
+/* Container principal */
+.gest-pharmacie-container {
+  display: flex;
+  margin-left: 290px;
+  height: 100vh;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  background-color: var(--gest-pharmacie-light-gray);
+}
+
+/* Sidebar */
+.gest-pharmacie-sidebar {
+  width: 250px;
+  background-color: var(--gest-pharmacie-sidebar-bg);
+  color: var(--gest-pharmacie-white);
+  padding: 0;
+  overflow-y: auto;
+}
+
+.gest-pharmacie-logo {
+  padding: 24px 20px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.gest-pharmacie-logo-text {
+  font-size: 24px;
+  font-weight: 600;
+  color: var(--gest-pharmacie-primary-teal);
+}
+
+.gest-pharmacie-nav {
+  padding: 20px 0;
+}
+
+.gest-pharmacie-nav-item {
+  display: flex;
+  align-items: center;
+  padding: 12px 20px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  color: #D1D5DB;
+}
+
+.gest-pharmacie-nav-item:hover {
+  background-color: rgba(255, 255, 255, 0.05);
+  color: var(--gest-pharmacie-white);
+}
+
+.gest-pharmacie-nav-active {
+  background-color: var(--gest-pharmacie-primary-teal);
+  color: var(--gest-pharmacie-white);
+  position: relative;
+}
+
+.gest-pharmacie-nav-active::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 4px;
+  background-color: var(--gest-pharmacie-white);
+}
+
+.gest-pharmacie-nav-icon {
+  margin-right: 12px;
+  font-size: 16px;
+}
+
+.gest-pharmacie-nav-text {
+  font-size: 14px;
+  font-weight: 500;
+}
+
+/* Main Content */
+.gest-pharmacie-main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+/* Header */
+.gest-pharmacie-header {
+  background-color: var(--gest-pharmacie-white);
+  padding: 16px 32px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid var(--gest-pharmacie-border);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.gest-pharmacie-header-left {
+  display: flex;
+  align-items: center;
+}
+
+.gest-pharmacie-title {
+  font-size: 28px;
+  font-weight: 600;
+  color: var(--gest-pharmacie-text-primary);
+  margin: 0;
+}
+
+.gest-pharmacie-header-right {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.gest-pharmacie-notification-badge {
+  position: relative;
+  width: 32px;
+  height: 32px;
+  background-color: var(--gest-pharmacie-notification-red);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.gest-pharmacie-notification-count {
+  color: var(--gest-pharmacie-white);
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.gest-pharmacie-user-avatar {
+  width: 40px;
+  height: 40px;
+  background-color: var(--gest-pharmacie-dark-gray);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--gest-pharmacie-white);
+  font-weight: 600;
+  cursor: pointer;
+}
+
+/* Content */
+.gest-pharmacie-content {
+  flex: 1;
+  padding: 32px;
+  overflow-y: auto;
+}
+
+.gest-pharmacie-card {
+  background-color: var(--gest-pharmacie-white);
+  border-radius: 12px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  padding: 32px;
+}
+
+.gest-pharmacie-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+.gest-pharmacie-card-title-section {
+  display: flex;
+  align-items: center;
+}
+
+.gest-pharmacie-chain-icon {
+  font-size: 20px;
+  margin-right: 12px;
+  color: var(--gest-pharmacie-primary-teal);
+}
+
+.gest-pharmacie-card-title {
+  font-size: 22px;
+  font-weight: 600;
+  color: var(--gest-pharmacie-text-primary);
+  margin: 0;
+}
+
+.gest-pharmacie-add-btn {
+  display: flex;
+  align-items: center;
+  background-color: var(--gest-pharmacie-primary-teal);
+  color: var(--gest-pharmacie-white);
+  border: none;
+  border-radius: 8px;
+  padding: 12px 20px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.gest-pharmacie-add-btn:hover {
+  background-color: var(--gest-pharmacie-dark-teal);
+  transform: translateY(-1px);
+}
+
+.gest-pharmacie-add-icon {
+  margin-right: 8px;
+  font-size: 16px;
+}
+
+.gest-pharmacie-description {
+  color: var(--gest-pharmacie-text-secondary);
+  font-size: 14px;
+  margin-bottom: 32px;
+  line-height: 1.5;
+}
+
+/* Search Section */
+.gest-pharmacie-search-section {
+  margin-bottom: 32px;
+}
+
+.gest-pharmacie-search-label {
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--gest-pharmacie-text-primary);
+  margin-bottom: 8px;
+}
+
+.gest-pharmacie-search-container {
+  display: flex;
+  position: relative;
+}
+
+.gest-pharmacie-search-input {
+  flex: 1;
+  padding: 12px 16px;
+  border: 1px solid var(--gest-pharmacie-border);
+  border-radius: 8px;
+  font-size: 14px;
+  color: var(--gest-pharmacie-text-primary);
+  background-color: var(--gest-pharmacie-white);
+  transition: all 0.2s ease;
+}
+
+.gest-pharmacie-search-input:focus {
+  outline: none;
+  border-color: var(--gest-pharmacie-primary-teal);
+  box-shadow: 0 0 0 3px rgba(78, 205, 196, 0.1);
+}
+
+.gest-pharmacie-search-input::placeholder {
+  color: var(--gest-pharmacie-text-secondary);
+}
+
+.gest-pharmacie-search-btn {
+  position: absolute;
+  right: 8px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 8px;
+  color: var(--gest-pharmacie-text-secondary);
+  font-size: 16px;
+}
+
+/* Table */
+.gest-pharmacie-table-container {
+  overflow-x: auto;
+  border-radius: 8px;
+  border: 1px solid var(--gest-pharmacie-border);
+}
+
+.gest-pharmacie-table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: var(--gest-pharmacie-white);
+}
+
+.gest-pharmacie-table-header {
+  background-color: var(--gest-pharmacie-light-gray);
+}
+
+.gest-pharmacie-table-th {
+  padding: 16px 20px;
+  text-align: left;
+  font-weight: 600;
+  color: var(--gest-pharmacie-text-primary);
+  font-size: 14px;
+  border-bottom: 1px solid var(--gest-pharmacie-border);
+}
+
+.gest-pharmacie-table-row {
+  transition: background-color 0.2s ease;
+}
+
+.gest-pharmacie-table-row:hover {
+  background-color: var(--gest-pharmacie-hover-gray);
+}
+
+.gest-pharmacie-table-td {
+  padding: 16px 20px;
+  border-bottom: 1px solid var(--gest-pharmacie-border);
+  font-size: 14px;
+  color: var(--gest-pharmacie-text-primary);
+}
+
+.gest-pharmacie-table-name {
+  font-weight: 500;
+}
+
+/* Status Badges */
+.gest-pharmacie-status-badge {
+  padding: 4px 12px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 600;
+  text-align: center;
+  display: inline-block;
+  min-width: 60px;
+}
+
+.gest-pharmacie-status-active {
+  background-color: var(--gest-pharmacie-active-green-bg);
+  color: var(--gest-pharmacie-active-green);
+}
+
+.gest-pharmacie-status-inactive {
+  background-color: var(--gest-pharmacie-inactive-red-bg);
+  color: var(--gest-pharmacie-inactive-red);
+}
+
+.gest-pharmacie-actions-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 8px 12px;
+  color: var(--gest-pharmacie-text-secondary);
+  font-size: 16px;
+  font-weight: bold;
+  border-radius: 4px;
+  transition: all 0.2s ease;
+}
+
+.gest-pharmacie-actions-btn:hover {
+  background-color: var(--gest-pharmacie-medium-gray);
+  color: var(--gest-pharmacie-text-primary);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .gest-pharmacie-container {
+    flex-direction: column;
+  }
+  
+  .gest-pharmacie-sidebar {
+    width: 100%;
+    height: auto;
+  }
+  
+  .gest-pharmacie-nav {
+    display: flex;
+    overflow-x: auto;
+    padding: 10px;
+  }
+  
+  .gest-pharmacie-nav-item {
+    min-width: 120px;
+    flex-shrink: 0;
+  }
+  
+  .gest-pharmacie-content {
+    padding: 16px;
+  }
+  
+  .gest-pharmacie-card {
+    padding: 20px;
+  }
+  
+  .gest-pharmacie-card-header {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 16px;
+  }
+  
+  .gest-pharmacie-table-container {
+    font-size: 12px;
+  }
+  
+  .gest-pharmacie-table-th,
+  .gest-pharmacie-table-td {
+    padding: 12px 8px;
+  }
+}

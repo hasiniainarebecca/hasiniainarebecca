@@ -1,0 +1,233 @@
+/* Variables de couleurs spécifiques à la page Admin Rapports */
+:root {
+  --sl-background-color: #f5f7fa;
+  --sl-panel-bg: #ffffff;
+  --sl-text-color: #333333;
+  --sl-text-light: #666666;
+  --sl-border-color: #e1e5eb;
+  --sl-color-primary: #4a90e2;
+  --sl-color-secondary: #50e3c2;
+  --sl-color-tertiary: #f5a623;
+  --sl-sidebar-bg: #2c3e50;
+  --sl-sidebar-text: #ecf0f1;
+  --sl-sidebar-hover: #34495e;
+  --sl-stat-card-bg: #ffffff;
+  --sl-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+}
+
+.admin-rapport-container {
+  margin-left: 290px;
+  min-height: 100vh;
+  background-color: var(--sl-background-color);
+  color: var(--sl-text-color);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.admin-rapport-header {
+  background-color: var(--sl-panel-bg);
+  padding: 1.5rem 2rem;
+  box-shadow: var(--sl-shadow);
+  border-bottom: 1px solid var(--sl-border-color);
+}
+
+.admin-rapport-header h1 {
+  margin: 0;
+  color: var(--sl-color-primary);
+  font-size: 1.8rem;
+  font-weight: 700;
+}
+
+.admin-rapport-header h2 {
+  margin: 0.5rem 0 0 0;
+  font-size: 1.2rem;
+  font-weight: 500;
+  color: var(--sl-text-light);
+}
+
+.admin-rapport-content {
+  display: flex;
+  min-height: calc(100vh - 120px);
+}
+
+.admin-rapport-sidebar {
+  width: 250px;
+  background-color: var(--sl-sidebar-bg);
+  color: var(--sl-sidebar-text);
+  padding: 1.5rem 0;
+}
+
+.admin-rapport-nav h3 {
+  padding: 0 1.5rem;
+  margin-bottom: 1rem;
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--sl-sidebar-text);
+  opacity: 0.7;
+}
+
+.admin-rapport-nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.admin-rapport-nav li {
+  padding: 0.8rem 1.5rem;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.admin-rapport-nav li:hover {
+  background-color: var(--sl-sidebar-hover);
+}
+
+.admin-rapport-nav li.active {
+  background-color: var(--sl-color-primary);
+  font-weight: 600;
+}
+
+.admin-rapport-main {
+  flex: 1;
+  padding: 2rem;
+  overflow-y: auto;
+}
+
+.admin-rapport-stats {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.admin-rapport-stat-card {
+  background-color: var(--sl-stat-card-bg);
+  border-radius: 8px;
+  padding: 1.5rem;
+  box-shadow: var(--sl-shadow);
+  text-align: center;
+}
+
+.admin-rapport-stat-card h3 {
+  margin: 0 0 0.8rem 0;
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: var(--sl-text-light);
+}
+
+.admin-rapport-stat-card .stat-number {
+  margin: 0;
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: var(--sl-color-primary);
+}
+
+.admin-rapport-charts {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  margin-bottom: 2rem;
+}
+
+.admin-rapport-chart-card {
+  background-color: var(--sl-panel-bg);
+  border-radius: 8px;
+  padding: 1.5rem;
+  box-shadow: var(--sl-shadow);
+}
+
+.admin-rapport-chart-card h3 {
+  margin: 0 0 0.5rem 0;
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+
+.chart-description {
+  margin: 0 0 1.5rem 0;
+  font-size: 0.9rem;
+  color: var(--sl-text-light);
+}
+
+.chart-container {
+  position: relative;
+  height: 250px;
+  width: 100%;
+}
+
+.admin-rapport-download {
+  background-color: var(--sl-panel-bg);
+  border-radius: 8px;
+  padding: 1.5rem;
+  box-shadow: var(--sl-shadow);
+}
+
+.admin-rapport-download h3 {
+  margin: 0 0 0.5rem 0;
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+
+.download-description {
+  margin: 0 0 1.5rem 0;
+  font-size: 0.9rem;
+  color: var(--sl-text-light);
+}
+
+.download-options {
+  margin-bottom: 1.5rem;
+}
+
+.download-option {
+  display: flex;
+  align-items: center;
+  margin-bottom: 0.8rem;
+}
+
+.download-option input[type="checkbox"] {
+  margin-right: 0.8rem;
+  width: 18px;
+  height: 18px;
+  accent-color: var(--sl-color-primary);
+}
+
+.download-option label {
+  cursor: pointer;
+  font-size: 0.95rem;
+}
+
+.download-button {
+  background-color: var(--sl-color-primary);
+  color: white;
+  border: none;
+  border-radius: 4px;
+  padding: 0.8rem 1.5rem;
+  font-size: 0.95rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.download-button:hover {
+  background-color: #3a80d2;
+}
+
+/* Responsive adjustments */
+@media (max-width: 1024px) {
+  .admin-rapport-charts {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .admin-rapport-content {
+    flex-direction: column;
+  }
+  
+  .admin-rapport-sidebar {
+    width: 100%;
+    padding: 1rem 0;
+  }
+  
+  .admin-rapport-stats {
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  }
+}

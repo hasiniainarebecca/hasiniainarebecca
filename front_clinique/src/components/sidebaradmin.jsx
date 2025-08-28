@@ -9,7 +9,7 @@ import {
     Bell,       
     User,           // Remplacé de FaUser
     LogOut,         // Remplacé de FaSignOutAlt
-    MessageSquare,  // Remplacé de FaCapsules pour Messages
+    Settings,  // Remplacé de FaCapsules pour Messages
     Stethoscope,    // Nouvelle icône pour Service Infirmier/Anesthésiste
     Building2       // Nouvelle icône pour Pharmacies
 } from "lucide-react"; // Importez les icônes de lucide-react
@@ -129,25 +129,25 @@ const SidebarAdmin = () => {
             </div>
             <ul className="sidebar-doctor-menu">
                 <li>
-                    <NavLink to="/dashboard/patient" className={({ isActive }) => isActive ? "active" : ""}><LayoutDashboard className="icon" /> Tableau de bord</NavLink>
+                    <NavLink to="/dashboard/Admin" className={({ isActive }) => isActive ? "active" : ""}><LayoutDashboard className="icon" /> Tableau de bord</NavLink>
                 </li>
                 <li>
-                    <NavLink to="/" className={({ isActive }) => isActive ? "active" : ""}><CalendarCheck className="icon" /> Gestion Utilisateurs</NavLink>
+                    <NavLink to="/Admin/gestion/utilisateur" className={({ isActive }) => isActive ? "active" : ""}><CalendarCheck className="icon" /> Gestion Utilisateurs</NavLink>
                 </li>
                 <li>
-                    <NavLink to="/" className={({ isActive }) => isActive ? "active" : ""}><CalendarCheck className="icon" /> Gestion Etablissements</NavLink>
+                    <NavLink to="/Admin/etablissement" className={({ isActive }) => isActive ? "active" : ""}><CalendarCheck className="icon" /> Gestion Etablissements</NavLink>
                 </li>
                 <li>
-                    <NavLink to="/" className={({ isActive }) => isActive ? "active" : ""}><CalendarCheck className="icon" /> Gestion Pharmacies</NavLink>
+                    <NavLink to="/Admin/pharmacie" className={({ isActive }) => isActive ? "active" : ""}><CalendarCheck className="icon" /> Gestion Pharmacies</NavLink>
                 </li>
                 <li>
-                    <NavLink to="/" className={({ isActive }) => isActive ? "active" : ""}><Building2 className="icon" /> Rapports</NavLink>
+                    <NavLink to="/Admin/rapport" className={({ isActive }) => isActive ? "active" : ""}><Building2 className="icon" /> Rapports</NavLink>
                 </li>
                 <li>
-                    <NavLink to="/" className={({ isActive }) => isActive ? "active" : ""}><MessageSquare className="icon" /> Paramètres</NavLink>
+                    <NavLink to="/Admin/parametre" className={({ isActive }) => isActive ? "active" : ""}><Settings className="icon" /> Paramètres</NavLink>
                 </li>
                 <li>
-                    <NavLink to="/patient-notification" className={({ isActive }) => isActive ? "active" : ""}>
+                    <NavLink to="/Admin-notification" className={({ isActive }) => isActive ? "active" : ""}>
                         <div className="notification-menu-item">
                             <Bell className="icon" /> Notifications
                             {unreadCount > 0 && (
