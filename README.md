@@ -4,7 +4,7 @@
 <img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&customColorList=6,11,20&height=220&section=header&text=Hasiniaina&fontSize=64&fontColor=ffffff&animation=fadeIn&fontAlignY=36&desc=Full-Stack%20Developer%20%C2%B7%20Antsirabe%2C%20Madagascar&descAlignY=58&descSize=18" width="100%" alt="header" />
 
 <a href="https://git.io/typing-svg">
-  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=22&duration=3000&pause=1000&color=BD93F9&center=true&vCenter=true&width=650&lines=Etudiant+en+Master+1+Genie+Logiciel;Je+construis+des+apps+web+et+mobiles;Laravel+%7C+React+%7C+Python+%7C+React+Native;Toujours+en+train+d%27apprendre" alt="Typing SVG" />
+  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=22&duration=3000&pause=1000&color=BD93F9&center=true&vCenter=true&width=650&lines=Etudiante+en+Genie+Logiciel;Je+construis+des+apps+web+et+mobiles;Laravel+%7C+React+%7C+Python+%7C+React+Native;Toujours+en+train+d%27apprendre" alt="Typing SVG" />
 </a>
 
 <br/>
@@ -21,8 +21,8 @@
 ```js
 const hasiniaina = {
   role: "Full-Stack Developer",
-  etudes: "Master Génie Logiciel — École Supérieure Polytechnique d'Antsirabe",
-  localisation: "Antsirabe, Madagascar 🇲🇬",
+  etudes: "Génie Logiciel — École Supérieure Polytechnique d'Antsirabe",
+  localisation: "Madagascar 🇲🇬",
   aime: ["Concevoir des interfaces soignées", "Résoudre des problèmes concrets", "Les projets de A à Z"],
   enCeMoment: "Je développe des projets web et mobiles et j'approfondis mes compétences",
   discuter: "Ouvert aux collaborations et aux échanges tech 🤝"
