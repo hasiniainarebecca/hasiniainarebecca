@@ -4,12 +4,12 @@
 <img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&customColorList=6,11,20&height=220&section=header&text=Hasiniaina&fontSize=64&fontColor=ffffff&animation=fadeIn&fontAlignY=36&desc=Full-Stack%20Developer%20%C2%B7%20Antsirabe%2C%20Madagascar&descAlignY=58&descSize=18" width="100%" alt="header" />
 
 <a href="https://git.io/typing-svg">
-  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=22&duration=3000&pause=1000&color=BD93F9&center=true&vCenter=true&width=650&lines=Étudiant+en+Master+1+Génie+Logiciel+🎓;Je+construis+des+apps+web+%26+mobiles+🚀;Laravel+%7C+React+%7C+Python+%7C+React+Native+💜;Toujours+en+train+d'apprendre+quelque+chose+de+nouveau+✨" alt="Typing SVG" />
+  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=22&duration=3000&pause=1000&color=BD93F9&center=true&vCenter=true&width=650&lines=Etudiant+en+Master+1+Genie+Logiciel;Je+construis+des+apps+web+et+mobiles;Laravel+%7C+React+%7C+Python+%7C+React+Native;Toujours+en+train+d%27apprendre" alt="Typing SVG" />
 </a>
 
 <br/>
 
-![Profile views](https://komarev.com/ghpvc/?username=hasiniainarebecca&label=Visiteurs&color=bd93f9&style=for-the-badge)
+![Visiteurs](https://visitor-badge.laobi.icu/badge?page_id=hasiniainarebecca.hasiniainarebecca&left_color=282a36&right_color=bd93f9)
 ![Followers](https://img.shields.io/github/followers/hasiniainarebecca?style=for-the-badge&color=ff79c6&labelColor=282a36)
 
 </div>
