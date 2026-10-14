@@ -1,7 +1,7 @@
 <!-- ====== HEADER ====== -->
 <div align="center">
 
-<img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&customColorList=6,11,20&height=220&section=header&text=Hasiniaina&fontSize=64&fontColor=ffffff&animation=fadeIn&fontAlignY=36&desc=Full-Stack%20Developer%20%C2%B7%20AMadagascar&descAlignY=58&descSize=18" width="100%" alt="header" />
+<img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&customColorList=6,11,20&height=220&section=header&text=Hasiniaina&fontSize=64&fontColor=ffffff&animation=fadeIn&fontAlignY=36&desc=Full-Stack%20Developer%20%C2%B7%20Madagascar&descAlignY=58&descSize=18" width="100%" alt="header" />
 
 <a href="https://git.io/typing-svg">
   <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=22&duration=3000&pause=1000&color=BD93F9&center=true&vCenter=true&width=650&lines=Developpeuse+motivee;Je+construis+des+apps+web+et+mobiles;Laravel+%7C+React+%7C+Python+%7C+React+Native;Toujours+en+train+d%27apprendre" alt="Typing SVG" />
@@ -82,7 +82,7 @@ const hasiniaina = {
 <div align="center">
 
 <!-- Remplace les liens ci-dessous par les tiens -->
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-bd93f9?style=for-the-badge&logo=linkedin&logoColor=white)]([https://www.linkedin.com/in/TON-LIEN](https://www.linkedin.com/in/hasiniaina-andriantsoa-3b4b28336?utm_source=share_via&utm_content=profile&utm_medium=member_android))
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-bd93f9?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/hasiniaina-andriantsoa-3b4b28336?utm_source=share_via&utm_content=profile&utm_medium=member_android)
 [![Email](https://img.shields.io/badge/Email-ff79c6?style=for-the-badge&logo=gmail&logoColor=white)](mailto:hasiniainarebecca@gmail.com)
 
 <br/>
