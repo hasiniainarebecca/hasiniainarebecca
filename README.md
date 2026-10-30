@@ -59,19 +59,20 @@ const hasiniaina = {
 | [**Livraison-intelligent**](https://github.com/hasiniainarebecca/Livraison-intelligent) | Système de livraison intelligent avec application mobile | `React Native` `Node.js` |
 | [**Fanorona-9**](https://github.com/hasiniainarebecca/Fanorona-9) | Jeu mobile inspiré du jeu traditionnel malgache | `React Native` `TypeScript` |
 | [**Jeu-de-point**](https://github.com/hasiniainarebecca/Jeu-de-point) | Jeu mobile | `React Native` `TypeScript` |
-| [**projet_TerraSmart**](https://github.com/hasiniainarebecca/projet_TerraSmart) | `React` | `Python` |
-| [**gestion_employes_dren**](https://github.com/hasiniainarebecca/gestion_employes_dren) |`Laravel` | 
-
+| [**projet_TerraSmart**](https://github.com/hasiniainarebecca/projet_TerraSmart) | Projet pour la Porte Ouverte | `Python` `React` |
+| [**gestion_employes_dren**](https://github.com/hasiniainarebecca/gestion_employes_dren) | Projet de stage | `Laravel` |
 ---
 
-## Statistiques GitHub
+## 📊 Statistiques GitHub
 
 <div align="center">
 
-<img height="170" src="https://github-readme-stats.vercel.app/api?username=hasiniainarebecca&show_icons=true&theme=dracula&hide_border=true&include_all_commits=true&count_private=true" alt="stats" />
-<img height="170" src="https://github-readme-stats.vercel.app/api/top-langs/?username=hasiniainarebecca&layout=compact&theme=dracula&hide_border=true&langs_count=6" alt="langages" />
-
 <img src="https://streak-stats.demolab.com?user=hasiniainarebecca&theme=dracula&hide_border=true" alt="streak" />
+
+<br/><br/>
+
+![Followers](https://img.shields.io/github/followers/hasiniainarebecca?style=for-the-badge&color=ff79c6&labelColor=282a36)
+![Repos](https://img.shields.io/badge/Repos_publics-9-bd93f9?style=for-the-badge&labelColor=282a36)
 
 </div>
 
