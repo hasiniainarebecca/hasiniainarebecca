@@ -71,8 +71,13 @@ const hasiniaina = {
 
 <br/><br/>
 
+<img height="170" src="https://raw.githubusercontent.com/hasiniainarebecca/hasiniainarebecca/main/profile-summary-card-output/darcula/2-most-commit-language.svg" alt="langages" />
+<img height="170" src="https://raw.githubusercontent.com/hasiniainarebecca/hasiniainarebecca/main/profile-summary-card-output/darcula/3-stats.svg" alt="stats" />
+
+<br/><br/>
+
 ![Followers](https://img.shields.io/github/followers/hasiniainarebecca?style=for-the-badge&color=ff79c6&labelColor=282a36)
-![Repos](https://img.shields.io/badge/Repos_publics-9-bd93f9?style=for-the-badge&labelColor=282a36)
+![Repos](https://img.shields.io/badge/Repos_publics-10-bd93f9?style=for-the-badge&labelColor=282a36)
 
 </div>
 
